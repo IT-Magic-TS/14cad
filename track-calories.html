@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/track-calories.js" defer></script>
+    <title>Track Calories | Meal & Calorie Tracker</title>     
+  </head>
+  <body>
+    
+    <nav class="p-5 bg-slate-600 relative">
+      <h1 class="text-white text-2xl text-center">Tracalorie</h1>
+      <button class="fixed right-8 top-4 px-4 py-2 bg-slate-400 rounded-md hover:bg-slate-500 clear-btn">Clear All</button>
+    </nav>
+
+    <div class="container mx-auto">
+
+      <!-- Form Card -->
+      <form class="w-full max-w-xs sm:max-w-lg bg-slate-100 mt-3 sm:mx-auto mx-6 p-5">
+        <h2 class="text-center text-xl mb-4 font-semibold text-gray-700">Add Meal / Food Item</h2>
+
+        <div class="flex md:gap-x-4 flex-col md:gap-y-2 items-center justify-center md:flex-row">
+          <div class="flex flex-col w-max">
+            <label class="font-thin text-gray-600">
+              Meal
+            </label>
+            <input type="text" name="" id="item-name" class="bg-yellow-100 p-2 text-blue-800 font-semibold text-lg border-gray-500 border">
+          </div>
+          <div class="flex flex-col w-max">
+            <label class="font-thin text-gray-600">
+              Calories
+            </label>
+            <input type="number" name="" id="item-calories" class="bg-green-100 p-2 text-blue-800 font-semibold text-lg border border-gray-500">
+          </div>
+        </div>
+
+        <div class="mt-4 flex justify-center items-center gap-x-2 md:justify-between">
+
+          <button 
+            class="uppercase px-4 py-2 bg-blue-600 border-2 border-blue-600 hover:bg-white hover:text-blue-600 text-white rounded-md add-btn"  
+          >
+            <div class="flex items-center gap-1">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+              </svg>
+              Add Meal
+            </div>
+          </button>
+
+          <button 
+            class="uppercase px-4 py-2 bg-orange-600 border-2 border-orange-600 hover:bg-white hover:text-orange-600 text-white rounded-md update-btn"  
+          >
+            <div class="flex items-center gap-1">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
+              </svg>              
+              Update Meal
+            </div>
+          </button>
+
+          <button 
+            class="uppercase px-4 py-2 bg-red-600 border-2 border-red-600 hover:bg-white hover:text-red-600 text-white rounded-md delete-btn"  
+          >
+            <div class="flex items-center gap-1">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+              </svg>    
+              Delete Meal
+            </div>
+          </button>
+
+          <button 
+            class="uppercase px-4 py-2 bg-gray-700 border-2 border-gray-700 hover:bg-white hover:text-gray-700 text-white rounded-md back-btn"  
+          >
+            <div class="flex items-center gap-1">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9.75L14.25 12m0 0l2.25 2.25M14.25 12l2.25-2.25M14.25 12L12 14.25m-2.58 4.92l-6.375-6.375a1.125 1.125 0 010-1.59L9.42 4.83c.211-.211.498-.33.796-.33H19.5a2.25 2.25 0 012.25 2.25v10.5a2.25 2.25 0 01-2.25 2.25h-9.284c-.298 0-.585-.119-.796-.33z" />
+              </svg>                                  
+              Back
+            </div>
+          </button>
+
+        </div>
+
+      </form>
+
+      <!-- Calories Count -->
+      <div class="mx-auo mt-7">
+        <h3 class="text-center text-3xl font-semibold text-gray-800">
+          Total Calories: <span id="total-calories">0</span>
+        </h3>
+      </div>
+
+      <!-- Item List -->
+      <ul class="w-full max-w-lg mx-auto mt-7 flex-col gap-y-2 s flex divide-y" id="ul-container">
+
+        <!-- <li class="flex justify-between px-2" id="item-0">
+          <div class="text-xl gap-x-2 flex text-gray-700">
+            Steak Dinner: <span class="font-bold text-green-800">1200 Calories</span>
+          </div>
+          <a href="#" class="text-cyan-700 cursor-pointer">
+            <img src="images/icon-pencil.svg" alt="icon pencil" class="w-6 h-6">
+          </a>
+        </li> -->
+
+      </ul>
+
+    </div>
+
+  </body>
+</html>

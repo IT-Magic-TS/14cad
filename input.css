@@ -2,29 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-@media (min-width: 1020px) {
-  .bg-hero {
-    width: 2000px;
-    height: 300px;
-    left: 30%;
-    @apply absolute rounded-l-full top-52 bg-softBlue;
-  }
+/* * {
+  outline: solid 1px gray;
+} */
 
-  .bg-tabs {
-    width: 2000px;
-    height: 300px;
-    right: 60%;
-    @apply absolute rounded-r-full top-60 bg-softBlue;
-  }
+.nav-link {
+  @apply tracking-widest hover:text-softRed;
+}
+.nav-link-mobile {
+  @apply block hover:text-softRed; 
 }
 
-.ficon:hover {
-  filter: invert(53%) sepia(38%) saturate(3303%) hue-rotate(326deg)
-    brightness(101%) contrast(96%);
-}
-
-/* HAMBURGER MENU */
-
+/* Hamburger MENU */
 .hamburger {
   cursor: pointer;
   width: 24px;
@@ -40,8 +29,6 @@
   position: absolute;
   width: 24px;
   height: 3px;
-  top: 0;
-  left: 0;
   background: #000;
   transform: rotate(0);
   transition: all 0.5s;
@@ -53,15 +40,14 @@
 
 .hamburger-bottom {
   transform: translateY(14px);
-  /* background: #000; */
 }
 
 .open {
   transform: rotate(90deg);
-  transform: translateY(0px);
+  transform: translate(0px);
   position: fixed;
-  top: 50px;
-  right: 25px;
+  top: 70px;
+  right: 15px;
 }
 
 .open .hamburger-top {
@@ -78,6 +64,100 @@
   background-color: #fff;
 }
 
-.btn-blue {
-  @apply block w-full py-3 text-white duration-200 border-2 rounded-lg bg-softBlue hover:text-softBlue hover:bg-white border-softBlue
+.ficon:hover {
+  filter: invert(53%) sepia(38%) saturate(3303%) hue-rotate(326deg) brightness(101%) contrast(96%);
 }
+
+.ficon2:hover {
+  filter: invert(80%) sepia(37%) saturate(7048%) hue-rotate(132deg)
+    brightness(105%) contrast(104%);
+}
+
+.btn-one {
+  @apply block py-3 text-white duration-200 border-2 rounded-lg bg-softBlue hover:text-softBlue hover:bg-white border-softBlue;
+}
+
+.btn-two {
+  @apply block py-3 text-green-800 duration-200 bg-yellow-400 border-2 border-yellow-500 rounded-lg hover:bg-white;
+}
+
+.btn-three {
+  @apply block py-3 text-green-800 duration-200 bg-green-300 border-2 border-green-400 rounded-lg hover:bg-white;
+}
+
+.calculation-input {
+  @apply py-2 pl-5 text-2xl text-green-900 bg-yellow-100 w-36;
+}
+
+.calculation-label {
+  @apply block w-40 pr-2 font-semibold text-right text-gray-700;
+}
+
+.calculation-result {
+  @apply py-2 pl-5 text-2xl text-gray-800 bg-green-200 w-36;
+}
+
+.calculation-label-2 {
+  @apply block pr-2 text-sm font-semibold text-left text-gray-700;
+}
+
+.calculation-input-2 {
+  @apply py-2 pl-5 text-2xl text-green-900 bg-yellow-100;
+}
+
+.calculation-result-2 {
+  @apply py-2 pl-5 text-2xl text-gray-800 bg-green-200;
+}
+
+.text-label {
+  @apply text-sm font-thin text-gray-500;
+}
+
+.text-label-bigger {
+  @apply text-lg font-bold text-gray-700;
+}
+
+.input-css {
+  fill: #fff !important;
+  color: white !important;
+}
+
+.bgYellow {
+  background-color: rgb(255, 255, 164);
+}
+
+.red {
+  color: rgb(234, 68, 68)
+}
+
+.green {
+  color: rgb(24, 197, 24);
+}
+
+@media (min-width: 480px) {
+  .container {
+      max-width: 100%;
+  }
+}
+
+@media (min-width: 1020px) {
+  .bg-etsy {
+    width: 2000px;
+    height: 250px;
+    left: 30%;
+    z-index: -1;
+    @apply absolute rounded-l-full bg-brown300 top-64;
+  }
+  .bg-tabs {
+    width: 2000px;
+    height: 250px;
+    right: 60%;
+    top: 450px;
+    z-index: -1;
+    @apply absolute z-0 rounded-r-full bg-brown300;
+  }
+  .container {
+    max-width: 1200px;
+  }
+}
+

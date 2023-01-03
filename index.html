@@ -3,7 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8">
+    <meta name="description" content="Mobile web development with JavaScript, Angular 8+, Ionic 5+, Vue, Bootstrap, Firebase, HTML 5, CSS3, Capacitor, Cordova.js. 3D and 2D design for the most expensive house market. Perfect drawings for CNC water-jet, laser or plasma cutting."/>
+	  <meta name="keywords" content="solidworks, slovenia, webpage performance index, architectural metalwork, ornamental metalwork, 3D printer, stair calculator, balustrade and railings calculator, metal gates with vertical bars, glass balustrade calculator, cnc waterjet cutting, igems, web progressive apps, hybrid apps, page validation, javascript, angular, ionic, react js, html 5, css 3"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="/image/png" href="icons/favicon.png"/>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#3292a6">
+    <meta name="apple-mobile-web-app-title" content="IT Magic">
+    <link rel="apple-touch-icon" href="/icons/apple-icon-57x57.png" sizes="57x57">
+    <link rel="apple-touch-icon" href="/icons/apple-icon-60x60.png" sizes="60x60">
+    <link rel="apple-touch-icon" href="/icons/apple-icon-72x72.png" sizes="72x72">
+    <link rel="apple-touch-icon" href="/icons/apple-icon-76x76.png" sizes="76x76">
+    <link rel="apple-touch-icon" href="/icons/apple-icon-114x114.png" sizes="114x114">
+    <link rel="apple-touch-icon" href="/icons/apple-icon-120x120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="/icons/apple-icon-144x144.png" sizes="144x144">
+    <link rel="apple-touch-icon" href="/icons/apple-icon-152x152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="/icons/apple-icon-180x180.png" sizes="180x180">
+    <meta name="msapplication-TileImage" content="/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#fff">
+    <meta name="theme-color" content="#3292a6">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,33 +33,51 @@
 
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js" defer></script>
-    <title>Bookmark Website</title>
+    <script src="js/calculations.js" defer></script>
+    <script src="js/project-cost.js" defer></script>
+    <title>14 CAD</title>
   </head>
   <body class="overflow-x-hidden">
     
     <!-- NAVBAR -->
-    <nav class="container relative p-6 mx-auto">
-      <!-- Flex Container for Nav Items -->
-      <div class="flex items-center justify-between my-6 space-x-20">
-        <!-- Logo -->
-        <div class="z-30">
-          <img src="images/logo-bookmark.svg" alt="logo" id="logo">
+    <nav class="container relative p-3 mx-auto">
+      <!-- Flex Container for Nav ITEMS -->
+      <div class="flex items-center justify-between w-full my-3 space-x-20">
+
+        <!-- LOGO and TEXT -->
+        <div id="logo" class="z-50 flex items-center space-x-3">
+          <img src="images/it-magic.png" alt="logo" class="object-cover w-20 h-20 md:h-14 md:w-14 animate-spin-slow">
+          <!-- <h1 id="logo-text" class="text-3xl font-bold text-gray-600">14 CAD</h1> -->
+          <img src="images/logo-14.png" alt="14 CAD" class="w-auto h-24">
         </div>
-        <!-- Menu Items -->
-        <div class="items-center hidden space-x-10 uppercase md:flex text-grayishBlue">
-          <a href="#features" class="tracking-widest hover:text-softRed">Features</a>
-          <a href="#download" class="tracking-widest hover:text-softRed">Download</a>
-          <a href="#faq" class="tracking-widest hover:text-softRed">FAQ</a>
-          <!-- Login Button -->
+
+        <!-- Menu ITEMS -->
+        <div class="items-center hidden space-x-4 uppercase lg:flex text-grayishBlue">
+          <!-- <a href="#etsy-advert" class="nav-link">Home</a> -->
+          <a href="#calculations" class="nav-link">Calculations</a>
+          <a href="#apps" class="nav-link">Apps</a>
+          <a href="#faq" class="nav-link">FAQ</a>
+
+          <!-- Etsy Shop -->
           <a 
-            href="#"
-            class="px-8 py-2 text-white border-2 rounded-lg shadow-md bg-softRed border-softRed hover:text-softRed hover:bg-white"
+            rel="external"
+            href="https://www.etsy.com/uk/shop/ITMagic?ref=related&listing_id=1050625692#items"
+            class="px-8 py-2 text-white border-2 rounded-lg shadow-md bg-softRed hover:text-softRed hover:bg-white hover:border-softRed"
           >
+            Etsy Shop
+          </a>   
+          <!-- Google Play -->
+          <a 
+            rel="external"
+            href="https://play.google.com/store/apps/collection/cluster?gsr=SjdqGEdhNXFlTWZIN1ZsTWVpdWhZSTZiTnc9PbICGgoYChRjbHViLnNtYXJ0YWR2ZXJ0LmFwcBAH:S:ANO1ljLd8NU"
+            class="px-6 py-2 text-white bg-green-500 border-2 rounded-lg shadow-md hover:text-green-500 hover:bg-white hover:border-green-500"
+          >
+            Google Play
           </a>
         </div>
 
         <!-- Hamburger Button -->
-        <button id="menu-btn" class="z-30 block hamburger md:hidden focus:outline-none">
+        <button id="menu-btn" class="z-30 block pr-10 -mt-10 hamburger lg:hidden focus:outline-none">
           <span class="hamburger-top"></span>
           <span class="hamburger-middle"></span>
           <span class="hamburger-bottom"></span>
@@ -50,110 +88,122 @@
       <!-- Mobile Menu -->
       <div
         id="menu"
-        class="fixed inset-0 z-20 flex-col items-center self-end hidden w-full h-full min-h-screen px-6 py-1 pt-24 pb-4 tracking-widest text-white uppercase divide-y divide-gray-500 opacity-90 bg-veryDarkBlue"
+        class="fixed inset-0 z-10 flex-col items-center self-end hidden w-full h-full min-h-screen px-6 py-1 pt-32 pb-4 tracking-widest text-white uppercase divide-y divide-gray-500 opacity-90 bg-veryDarkBlue"
       >
         <div class="w-full py-3 text-center">
-          <a href="#features" class="block hover:text-softRed link">Features</a>
+          <a href="#etsy-advert" class="nav-link-mobile link">Home</a>
         </div>
         <div class="w-full py-3 text-center">
-          <a href="#download" class="block hover:text-softRed link">Download</a>
+          <a href="#calculations" class="nav-link-mobile link">Calculations</a>
         </div>
         <div class="w-full py-3 text-center">
-          <a href="#faq" class="block hover:text-softRed link">FAQ</a>
+          <a href="#apps" class="nav-link-mobile link">Android Apps</a>
         </div>
         <div class="w-full py-3 text-center">
-          <a href="#" class="block hover:text-softRed link">Login</a>
+          <a href="#faq" class="nav-link-mobile link">FAQ</a>
         </div>
+        <div class="w-full py-5 text-center">
+          <a href="https://www.etsy.com/uk/shop/ITMagic?ref=related&listing_id=1041033422#items" rel="external" class="px-8 py-2 text-white border-2 rounded-lg shadow-md bg-softRed hover:text-softRed hover:bg-white hover:border-softRed">Etsy Shop</a>
+        </div>
+        <!-- Google Play -->
+        <a 
+          rel="external"
+          href="https://play.google.com/store/apps/collection/cluster?gsr=SjdqGEdhNXFlTWZIN1ZsTWVpdWhZSTZiTnc9PbICGgoYChRjbHViLnNtYXJ0YWR2ZXJ0LmFwcBAH:S:ANO1ljLd8NU"
+          class="px-6 py-2 text-white bg-green-500 border-2 rounded-lg shadow-md hover:text-green-500 hover:bg-white hover:border-green-500"
+        >
+          Google Play
+        </a>
       </div>
+
     </nav>
     <!-- End of NAVBAR -->
 
-    <!-- HERO Section -->
-    <section id="hero">
+    <!-- ETSY Advert -->
+    <section id="etsy-advert">
       <!-- Container for Image & Content -->
-      <div class="container flex flex-col-reverse p-6 mx-auto lg:flex-row lg:mb-0">
+      <div class="container flex flex-col-reverse p-3 mx-auto lg:flex-row lg:mb-0">
 
         <!-- Content -->
-        <div class="flex flex-col space-y-10 lg:mt-16 lg:w-1/2">
-          <h1 class="text-3xl font-semibold text-center lg:text-6xl lg:text-left">A Simple Bookmark Manager</h1>
-          <p class="max-w-md mx-auto text-lg text-center text-gray-400 lg:text-2xl lg:text-left lg:mt-0 lg:mx-0">
-            A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free. 
+        <div class="flex flex-col space-y-5 lg:mt-4 lg:w-1/3">
+          <h1 class="pt-3 text-2xl font-semibold text-center lg:text-3xl lg:text-left">IT Magic Etsy Store</h1>
+          <p class="max-w-md mx-auto text-lg text-center text-gray-500 lg:text-xl lg:text-left lg:mt-0 lg:mx-0">
+            3D and 2D design for the most expensive house market in UK. Specialist for ornamental metalwork. Stairs, Balustrades, Balconies, Gates, Doors, Art Tables, Screens....
           </p>
-          <!-- Buttons Container -->
-          <div class="flex items-center justify-center w-full space-x-4 lg:justify-start">
-            <a 
-              href="#"
-              class="p-4 text-sm font-semibold text-white border-2 rounded shadow-md bg-softBlue border-softBlue md:text-base hover:bg-white hover:text-softBlue"
+          <div class="text-center">
+            <button 
+              type="button"
+              href="https://www.etsy.com/uk/shop/ITMagic?ref=related&listing_id=1041033422#items" 
+              rel="external"
+              class="flex-1 px-4 py-2 text-white border-2 rounded-lg shadow-md bg-softRed hover:text-softRed hover:bg-white hover:border-softRed"
             >
-              Get it on Chrome
-            </a>
-            <a 
-              href="#"
-              class="p-4 text-sm font-semibold text-black bg-gray-300 border-2 rounded shadow-md border-b-gray-300 md:text-base hover:bg-white hover:text-gray-600"
-            >
-              Get it on Firefox
-            </a>
+              ETSY SHOP
+            </button>
           </div>
         </div>
 
         <!-- Image -->
-        <div class="relative mx-auto lg:mx-0 lg:mb-0 lg:w-1/2">
-          <div class="bg-hero"></div>
-          <img src="images/illustration-hero.svg" alt="hero" class="relative z-10 overflow-visible lg:top-24 xl:top-0">
+        <div class="relative mx-auto lg:mx-0 lg:mb-0 lg:w-2/3">
+          <div class="bg-etsy z-2"></div>
+          <img 
+            src="images/14cad-main.png" 
+            alt="IT Magic Etsy Store" 
+            class="relative overflow-visible border-8 border-gray-600 rounded-lg z-2 lg:top-2 xl:top-2">
+          <!-- <div class="border-8 border-gray-600 rounded-lg z-5">
+            <img src="images/etsy.png" alt="IT Magic Etsy Store" class="object-cover">
+          </div> -->
         </div>
 
       </div>
     </section>
-    <!-- END of HERO Section -->
 
-    <!-- Features Heading -->
-    <section id="features">
-      <div class="container px-6 mx-auto mt-16">
-        <h2 class="mb-6 text-4xl font-semibold text-center">Features</h2>
-        <p class="max-w-md mx-auto text-center text-grayishBlue">
-          Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.
+    <!-- Calculations Heading -->
+    <section id="calculations">
+      <div class="container px-6 mx-auto mt-8">
+        <h2 class="mb-6 text-4xl font-semibold text-center">Calculations</h2>
+        <p class="max-w-md mx-auto text-center text-gray-500">
+          Our aim is to make it quick and easy for you to calculate gap between balusters, stair going and rise, spiral or helical balustrades bending radius, baluster angle and length...
         </p>
       </div>
     </section>
 
-    <!-- Features Tabs -->          
+    <!-- Calculations Tabs -->
     <section id="tabs">
 
       <!-- Tabs/Panels Container -->
-      <div class="container relative px-6 mx-auto my-6 mt-12 mb-32">
-        <!-- Showing big square on big screens -->
-        <div class="bg-tabs"></div>
+      <div class="container relative px-2 mx-auto my-6 mb-32 mt-7">
+        <!-- Showing big rectangular on big screens -->
+        <div class="z-0 bg-tabs"></div>
 
         <!-- Tabs Flex Container -->
         <div class="flex flex-col justify-center max-w-xl mx-auto mb-6 border-b md:space-x-10 md:flex-row">
-          
+
           <!-- Tab 1 -->
-          <div 
-            class="flex justify-center text-center text-gray-600 border-b md:border-b-0 hover:text-softRed md:w-1/3 tab"
+          <div
+            class="flex justify-center py-4 text-center text-gray-600 border-b md:border-b-0 hover:text-softRed md:w-1/3 tab"
             data-target="panel-1"
           >
-            <div class="py-5 border-b-4 cursor-pointer border-softRed" data-target="panel-1">
-              Simple Bookmarking
+            <div class="border-b-4 cursor-pointer border-softRed" data-target="panel-1">
+              Simple Panel
             </div>
           </div>
 
           <!-- Tab 2 -->
-          <div 
-            class="flex justify-center text-center text-gray-600 border-b md:border-b-0 hover:text-softRed md:w-1/3 tab"
+          <div
+            class="flex justify-center py-4 text-center text-gray-600 border-b md:border-b-0 hover:text-softRed md:w-1/3 tab"
             data-target="panel-2"
           >
-            <div class="py-5 cursor-pointer" data-target="panel-2">
-              Speedy Searching
+            <div class="cursor-pointer" data-target="panel-2">
+              Balustrade Stair
             </div>
           </div>
 
-          <!-- Tab 3 -->
-          <div 
-            class="flex justify-center text-center text-gray-600 border-b md:border-b-0 hover:text-softRed md:w-1/3 tab"
+          <!-- Tab 2 -->
+          <div
+            class="flex justify-center py-4 text-center text-gray-600 border-b md:border-b-0 hover:text-softRed md:w-1/3 tab"
             data-target="panel-3"
           >
-            <div class="py-5 cursor-pointer" data-target="panel-3">
-              Easy Sharing
+            <div class="cursor-pointer" data-target="panel-3">
+              Job Cost
             </div>
           </div>
 
@@ -162,377 +212,732 @@
         <!-- Tab Panels -->
         <div id="panels" class="container mx-auto">
 
-          <!-- Panel 1 -->
+          <!-- Simple Panel -->
           <div class="panel-1 panel">
-            <div class="flex flex-col py-5 md:flex-row md:space-x-7">
-              <!-- Panel Image -->
-              <div class="flex justify-center md:w-1/2">
-                <img src="images/illustration-features-tab-1.svg" alt="ilustration 1" class="relative z-10">
-              </div>
-              <!-- Panel Content -->
-              <div class="flex flex-col space-y-8 md:w-1/2">
-                <h3 class="mt-32 text-3xl font-semibold text-center md:mt-0 md:text-left">
-                  Bookmark in one click
-                </h3>
-                <p class="max-w-md text-center text-grayishBlue md:text-left">
-                  Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.
-                </p>
-                <div class="mx-auto">
-                  <a 
-                    href="#"
-                    class="px-6 py-3 mt-4 font-semibold text-white border-2 border-white rounded-lg md:inline-flex bg-softBlue hover:bg-white hover:text-softBlue hover:border-softBlue hover:border-2"
-                  >More Info</a>
-                </div>
-              </div>
-            </div>
-          </div>
+            <div class="flex flex-col py-5 lg:flex-row md:space-x-7">
 
-          <!-- Panel 2 -->
+              <!-- Panel Image -->
+              <div class="flex justify-center lg:w-2/3">
+                <img src="images/panel-simple.png" alt="panel simple" class="relative z-10 h-auto max-w-full border-8 border-gray-600 rounded-lg">
+              </div>
+
+              <!-- Panel Content -->
+              <div class="flex flex-col w-full pt-4 mx-auto lg:w-1/3 md:flex-row lg:flex-col sm:justify-center sm:gap-x-2">
+
+                <!-- Calculate Gap -->
+                <div class="flex flex-col p-2 rounded-lg shadow-lg gap-y-2" id="simple-panel-container-A">
+                  <div class="flex items-center">   
+                    <div class="calculation-label">Panel Length:</div>
+                    <input type="number" name="length" id="length" class="calculation-input panel-calc">
+                  </div>
+                  <div class="flex items-center">
+                    <div class="calculation-label">Bd (Bar Diameter):</div>
+                    <input type="number" name="barDiameter" id="barDiameter" class="calculation-input">
+                  </div>
+                  <div class="flex items-center">
+                    <div class="calculation-label">Bar Number:</div>
+                    <input type="number" name="barNumber" id="barNumber" class="calculation-input">
+                  </div>
+                  <div class="flex items-center">
+                    <div class="calculation-label">Gap:</div>
+                    <input type="text" class="calculation-result" value="0" disabled id="panel-gap">
+                  </div>
+                </div>
+
+                <!-- Calculate Bar Length -->
+                <div class="flex flex-col p-2 rounded-lg shadow-lg gap-y-2" id="simple-panel-container-B">
+                  <div class="flex items-center">
+                    <div class="calculation-label">Panel Height:</div>
+                    <input type="number" name="height" id="panelHeight" class="calculation-input">
+                  </div>
+                  <div class="flex items-center">
+                    <div class="calculation-label">X:</div>
+                    <input type="number" name="X" id="panelX" class="calculation-input">
+                  </div>
+                  <div class="flex items-center">
+                    <div class="calculation-label">Y:</div>
+                    <input type="number" name="Y" id="panelY" class="calculation-input">
+                  </div>
+                  <div class="flex items-center">
+                    <div class="calculation-label">Bar Length:</div>
+                    <input type="text" class="calculation-result" value="0" disabled id="panel-bar-length">
+                  </div>
+                </div>
+
+
+              </div>
+
+            </div>
+
+            <div class="relative z-50 flex justify-center mt-4 gap-x-4">
+              <button class="btn-one w-52" id="panel-btn-start-points">Start Points</button>
+            </div>
+
+          </div>
+          <!-- END Simple Panel -->
+
+
+          <!-- STAIR BALUSTRADE -->
           <div class="hidden panel-2 panel">
-            <div class="flex flex-col py-5 md:flex-row md:space-x-7">
-              <!-- Panel Image -->
-              <div class="flex justify-center md:w-1/2">
-                <img src="images/illustration-features-tab-2.svg" alt="ilustration 1" class="relative z-10">
-              </div>
-              <!-- Panel Content -->
-              <div class="flex flex-col space-y-8 md:w-1/2">
-                <h3 class="text-3xl font-semibold text-center mt-14 md:mt-0 md:text-left">
-                  Inteligent search
-                </h3>
-                <p class="max-w-md text-center text-grayishBlue md:text-left">
-                  Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.
-                </p>
-                <div class="mx-auto">
-                  <a 
-                    href="#"
-                    class="px-6 py-3 mt-4 font-semibold text-white border-2 border-white rounded-lg md:inline-flex bg-softBlue hover:bg-white hover:text-softBlue hover:border-softBlue hover:border-2"
-                  >More Info</a>
-                </div>
-              </div>
-            </div>
-          </div>
+            <div class="flex flex-col py-5 lg:flex-row md:space-x-7">
 
-          <!-- Panel 3 -->
-          <div class="hidden panel-3 panel">
-            <div class="flex flex-col py-5 md:flex-row md:space-x-7">
               <!-- Panel Image -->
-              <div class="flex justify-center md:w-1/2">
-                <img src="images/illustration-features-tab-3.svg" alt="ilustration 1" class="relative z-10">
-              </div>
-              <!-- Panel Content -->
-              <div class="flex flex-col space-y-8 md:w-1/2">
-                <h3 class="text-3xl font-semibold text-center mt-14 md:mt-0 md:text-left">
-                  Share your bookmarks
-                </h3>
-                <p class="max-w-md text-center text-grayishBlue md:text-left">
-                  Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.
-                </p>
-                <div class="mx-auto">
-                  <a 
-                    href="#"
-                    class="px-6 py-3 mt-4 font-semibold text-white border-2 border-white rounded-lg md:inline-flex bg-softBlue hover:bg-white hover:text-softBlue hover:border-softBlue hover:border-2"
-                  >More Info</a>
+              <div class="flex flex-col justify-middle lg:w-2/3">
+                <div id="img-A-stair-balustrade">
+                  <img src="images/B1.PNG" 
+                    alt="panel simple" 
+                    class="relative z-10 block h-auto max-w-xs mx-auto border-8 border-gray-600 rounded-lg sm:max-w-md md:max-w-lg"
+                  >
+                </div>
+                <div class="hidden" id="img-B-stair-balustrade">
+                  <img src="images/A5.PNG" 
+                    alt="panel simple" 
+                    class="relative z-10 block h-auto max-w-xs mx-auto border-8 border-gray-600 rounded-lg md:max-w-2xl sm:max-w-md"
+                  >
+                </div>
+                <div class="z-50 flex justify-center pt-2 gap-x-2">
+                  <button class="px-4 btn-two" id="btn-dwg-A-SB">Drawing 1</button>
+                  <button class="px-4 btn-three" id="btn-dwg-B-SB">Drawing 2</button>
                 </div>
               </div>
+
+              <!-- Panel Content -->
+              <div class="flex flex-col w-full p-3 pt-4 mx-auto lg:w-1/3 md:flex-row lg:flex-col sm:justify-center sm:gap-x-2">
+
+                <!-- Container A -->
+                <div class="flex flex-col p-2 rounded-lg shadow-lg gap-y-2" id="k-container-A">
+                  <h2 class="p-2 text-lg font-semibold text-center text-gray-800">Calculate Gap and Start Points</h2>
+                  <div class="flex items-center">   
+                    <div class="calculation-label">going:</div>
+                    <input type="number" name="kGoing" class="calculation-input">
+                  </div>
+
+                  <div class="flex items-center">   
+                    <div class="calculation-label">Bd:</div>
+                    <input type="number" name="kBd" class="calculation-input">
+                  </div>
+
+                  <div class="flex items-center">   
+                    <div class="calculation-label">Bar Number:</div>
+                    <input type="number" name="kBn" class="calculation-input">
+                  </div>
+  
+                  <div class="flex items-center">   
+                    <div class="calculation-label">d:</div>
+                    <input type="number" name="kd" class="calculation-input">
+                  </div>
+
+                  <div class="flex items-center">
+                    <div class="calculation-label">Gap:</div>
+                    <input type="text" class="calculation-result" value="0" disabled id="kGap">
+                  </div>
+
+                  <div class="p-2">
+                    <button class="px-4 mx-auto btn-one" id="k-btn-start-points">Start Points</button>
+                  </div>
+                </div>
+                <!-- END Container A -->
+
+                <!-- Container B -->
+                <div class="flex flex-col p-2 rounded-lg shadow-lg gap-y-2" id="k-container-B">
+                  <h2 class="p-2 text-lg font-semibold text-center text-gray-800">Calculate Handrail and Angle</h2>
+
+                  <div class="flex items-center">   
+                    <div class="calculation-label">rise:</div>
+                    <input type="number" name="kRise" class="calculation-input">
+                  </div>
+
+                  <div class="flex items-center">   
+                    <div class="calculation-label">Step Number:</div>
+                    <input type="number" name="kStepN" class="calculation-input">
+                  </div>
+
+                  <div class="flex items-center">
+                    <div class="calculation-label">L:</div>
+                    <input type="text" class="calculation-result" value="0" disabled id="kL">
+                  </div>
+
+                  <div class="flex items-center">
+                    <div class="calculation-label">Angle:</div>
+                    <input type="text" class="calculation-result" value="0" disabled id="kAngle">
+                  </div>
+
+                  <h2 class="p-2 text-lg font-semibold text-center text-gray-800">Calculate Bars Length</h2>
+
+                  <div class="flex items-center">   
+                    <div class="calculation-label">H:</div>
+                    <input type="number" name="kH" class="calculation-input">
+                  </div> 
+
+                  <div class="flex items-center">   
+                    <div class="calculation-label">Hd:</div>
+                    <input type="number" name="kHd" class="calculation-input">
+                  </div>
+
+                  <div class="flex items-center">   
+                    <div class="calculation-label">X:</div>
+                    <input type="number" name="kX" class="calculation-input">
+                  </div>
+
+                  <div class="mx-auto">
+                    <div id="bar-length-container" class="flex flex-col items-start justify-center">
+                    
+                    </div>
+                  </div>
+
+                </div>
+                <!-- END Container C -->
+
+              </div>
+              <!-- END Panel Content -->
+            
+            </div>
+
+          </div>
+          <!-- END STAIR BALUSTRADE -->
+
+          <!-- CALCULATE COST OF THE PROJECT -->
+          <div class="hidden panel-3 panel">
+            <div class="z-10 flex flex-col items-center justify-center lg:flex-row lg:items-start">
+
+              <div class="z-10 flex flex-col items-center justify-center p-4 mx-auto bg-blue-300 shadow-md lg:w:1/3 gap-x-2 part-add-inputs gap-y-2">
+
+                <div class="w-full text-right">   
+                  <!-- <div class="calculation-label">Name:</div> -->
+                  <input type="text" name="partName" id="part-name" placeholder="Part Name" class="w-full calculation-input-2 placeholder:text-sm">
+                </div>
+                <div class="flex items-center">   
+                  <div class="calculation-label">Price:</div>
+                  <input type="number" name="partPrice" class="w-40 calculation-input-2" id="part-price">
+                </div>
+                <div class="flex items-center">   
+                  <div class="calculation-label">Quantity:</div>
+                  <input type="number" name="partQuantity" class="w-40 calculation-input-2" id="part-quantity">
+                </div>
+                <div class="flex items-center">   
+                  <div class="calculation-label">Total:</div>
+                  <input type="number" name="partTotal" disabled class="w-40 calculation-result-2 partTotal">
+                </div>         
+                <button
+                  type="button"
+                  class="px-4 py-2 mt-2 font-bold text-gray-600 border-2 border-gray-600 cursor-pointer hover:scale-105 hover:bg-gray-300 hover:text-gray-900"
+                  id="btn-add-part"
+                >
+                  Add Part
+                </button>
+
+                <!-- Buttons UPDATE PART -->
+                <div id="container-btns-update" class="hidden">
+                  <div class="z-50 flex justify-center pt-2 gap-x-2">
+                    <button class="px-4 btn-two" id="btn-part-update">Save</button>
+                    <button class="px-4 btn-three" id="btn-part-update-cancel">Cancel</button>
+                  </div>
+                </div>
+  
+              </div>
+
+              <!-- START PROJECT LIST -->
+              <div class="z-10 w-full p-2 mt-3 bg-white border shadow-lg lg:w-2/3 lg:mt-0 lg:ml-2">
+                <h2 class="w-full text-2xl font-bold text-center text-blue-600">Part List</h2>
+
+                <div id="part-list-container" class="z-10">
+                  
+
+                </div>
+
+                <div class="flex flex-col items-center justify-between md:flex-row">
+                  <div>
+                    <button 
+                      id="clear-parts-btn"
+                      class="px-4 py-2 mt-4 text-green-900 duration-300 bg-yellow-300 cursor-pointer hover:text-yellow-300 hover:bg-green-900 clear-tasks"
+                      type="button"    
+                    >
+                      Clear Parts
+                    </button>
+                  </div>
+                  <div class="mt-4">
+                    <h2 
+                      class="p-2 text-xl font-semibold bg-yellow-200"
+                    >
+                      Total Price: <span id="projectTotalPrice" class="text-2xl font-bold ">0.00</span>
+                    </h2>
+                  </div>
+                </div>
+
+              </div>
+              <!-- END PROJECT LIST -->
+
             </div>
           </div>
+          <!-- END CALCULATE COST OF THE PROJECT -->
 
         </div>
-        <!-- END Tab Panels -->
+        
 
       </div>
 
     </section>
-    <!-- END Features Tabs --> 
 
-    <!-- Download Heading -->
-    <section id="download">
-      <div class="container px-6 mx-auto">
-
+    <!-- Apps Heading -->
+    <section id="apps" class="relative">
+      <div class="container z-50 px-6 mx-auto">
+        <h2 class="z-50 mb-6 text-3xl font-semibold text-center md:text-4xl">
+          Android Applications
+        </h2>
+        <p class="max-w-lg mx-auto text-center text-gray-700">
+          Time is money - Speed up work with our calculations
+        </p>
       </div>
     </section>
     <!-- END Download Heading -->
 
-    <!-- Download Heading -->
-    <section id="download">
-      <div class="container px-6 mx-auto">
-        <h2 class="mb-6 text-3xl font-semibold text-center md:text-4xl">
-          Download the Extension
-        </h2>
-        <p class="max-w-lg mx-auto text-center text-grayishBlue">
-          We've more browser in the pipeline. Please let us know if you have got a favourite you would like us to prioritize.
-        </p>
-      </div>
-    </section>
-
-    <!-- Download Boxes -->
-    <section id="download-boxes" class="py-32">
+    <!-- Apps Boxes -->
+    <section class="relative z-10">
       <!-- Boxes Container -->
-      <div
-        class="relative flex flex-col items-center max-w-5xl px-10 mx-auto space-y-10 md:px-6 md:space-y-0 md:space-x-7 md:flex-row"     
-      >
+      <div class="relative z-20 flex flex-col items-center max-w-5xl px-10 mx-auto space-y-10 md:px-6 md:space-y-0 md:space-x-7 md:flex-row">
 
         <!-- Box 1 -->
-        <div class="flex flex-col w-full py-6 space-y-4 text-center rounded-lg shadow-lg md:w-1/3">
-          <!-- Image -->
-          <div class="flex justify-center">
-            <img src="images/logo-chrome.svg" alt="logo">
+        <div class="w-full md:w-1/3">
+
+          <div
+            class="flex flex-col py-6 space-y-4 text-center rounded-lg shadow-lg"
+          >
+            <!-- Image -->
+            <div class="flex justify-center">
+              <img src="images/android-1.png" alt="stair and balustrade calculator">
+            </div>  
+            <!-- Text -->
+            <h5 class="pt-6 text-xl font-bold">Stair & Balustrade Calculator</h5>
+            <p class="text-gray-400">
+              Some very importan information you need to know before building stairs.
+            </p>
+            <!-- Dots -->
+            <div class="px-6 pt-6 capitalize bg-repeat-x bg-dots">
+              <a
+                rel="external"
+                href="https://play.google.com/store/apps/details?id=dev.itmagic.stairandbalustrade"
+                class="block w-full py-5 mt-3 text-white duration-200 border-2 rounded-lg bg-softBlue hover:text-softBlue hover:bg-white border-softBlue"
+              >
+                Go to Google Play
+              </a>
+            </div>
           </div>
-          <!-- Text -->
-          <h5 class="pt-6 text-xl font-bold">
-            Add to Chrome
-          </h5>
-          <p class="text-gray-400">
-            Minimum version 62
-          </p>
-          <!-- Dots -->
-          <div class="px-6 capitalize bg-repeat-x bg-dots">
-            <a href="#" class="btn-blue">Add & Install Extension</a>
-          </div>
+
         </div>
 
         <!-- Box 2 -->
         <div class="w-full md:w-1/3">
-          <div class="flex flex-col w-full py-6 space-y-4 text-center rounded-lg shadow-lg md:mt-8">
+   
+          <div
+            class="flex flex-col py-6 space-y-4 text-center rounded-lg shadow-lg md:mt-16"
+          >
             <!-- Image -->
             <div class="flex justify-center">
-              <img src="images/logo-firefox.svg" alt="logo">
+              <img src="images/android-2.png" alt="Gate Calculator">
             </div>
             <!-- Text -->
-            <h5 class="pt-6 text-xl font-bold">
-              Add to Firefox
-            </h5>
+            <h5 class="pt-6 text-xl font-bold">Gate Calculator</h5>
             <p class="text-gray-400">
-              Minimum version 55
+              Speed up marking centers of vertical gate bars.
             </p>
             <!-- Dots -->
-            <div class="px-6 capitalize bg-repeat-x bg-dots">
-              <a href="#" class="btn-blue">Add & Install Extension</a>
+            <div class="px-6 pt-6 capitalize bg-repeat-x bg-dots">
+              <a
+                rel="external"
+                href="https://play.google.com/store/apps/details?id=dev.itmagic.gatecalculator"
+                class="block w-full py-5 mt-3 text-white duration-200 border-2 rounded-lg bg-softBlue hover:text-softBlue hover:bg-white border-softBlue"
+              >
+                Go to Google Play
+              </a>
             </div>
           </div>
+
         </div>
 
         <!-- Box 3 -->
         <div class="w-full md:w-1/3">
-          <div class="flex flex-col w-full py-6 space-y-4 text-center rounded-lg shadow-lg md:mt-16">
+
+          <div
+            class="flex flex-col py-6 space-y-4 text-center rounded-lg shadow-lg md:mt-32"
+          >
             <!-- Image -->
             <div class="flex justify-center">
-              <img src="images/logo-opera.svg" alt="logo">
+              <img src="images/android-3.png" alt="Railing Calculator">
             </div>
             <!-- Text -->
-            <h5 class="pt-6 text-xl font-bold">
-              Add to Opera
-            </h5>
+            <h5 class="pt-6 text-xl font-bold">Railing Calculator</h5>
             <p class="text-gray-400">
-              Minimum version 46
+              Many calculations for railings. Calculate gaps, vertical balusters start points...
             </p>
             <!-- Dots -->
-            <div class="px-6 capitalize bg-repeat-x bg-dots">
-              <a href="#" class="btn-blue">Add & Install Extension</a>
+            <div class="px-6 pt-6 capitalize bg-repeat-x bg-dots">
+              <a
+                rel="external"
+                href="https://play.google.com/store/apps/details?id=dev.itmagic.simplepanelcalculator"
+                class="block w-full py-5 mt-3 text-white duration-200 border-2 rounded-lg bg-softBlue hover:text-softBlue hover:bg-white border-softBlue"
+              >
+                Go to Google Play
+              </a>
             </div>
           </div>
+
         </div>
 
       </div>
     </section>
+    <!-- END Download Boxes -->
 
     <!-- FAQ Heading -->
     <section id="faq">
       <div class="container mx-auto">
-        <h2 class="mb-6 text-3xl font-semibold text-center md:text-4xl">
-          Frequently Asked Questions
-        </h2>
+        <h2 class="mb-6 text-3xl font-semibold text-center md:text-4xl">Frequently Asked Questions</h2>
         <p class="max-w-lg px-6 mx-auto text-center text-grayishBlue">
-          Here are some of our FAQs. If you have any other questions you'd like answered please free to email us.'
+          Here are some of our FAQs. If you have any other questions you'd like answered please free to email us.
         </p>
       </div>
     </section>
+    <!-- FAQ Heading -->
 
     <!-- FAQ Accordion -->
     <section id="faq-accordion">
       <!-- Main Container -->
-      <div class="container px-6 mx-auto mb-32">
+      <div class="px-6 mx-auto mb-32 containeer">
         <!-- Accordion Container -->
         <div class="max-w-2xl m-8 mx-auto overflow-hidden">
 
           <!-- Tab 1 -->
           <div class="py-1 border-b outline-none group" tabindex="1">
+
             <!-- Tab Flex Container -->
             <div
-              class="flex items-center justify-between py-3 text-gray-500 transition duration-500 ease-in-out cursor-pointer group"
+              class="flex items-center justify-between py-3 text-gray-500 transition duration-500 ease-out cursor-pointer group"
             >
               <!-- Tab Title -->
-              <div class="transition duration-500 ease-in-out group-hover:text-red-500">
-                What is Bookmark?            
+              <div class="font-semibold text-gray-800 transition duration-500 ease-out group-hover:text-red-500">
+                How important is 3D Design?
               </div>
-              <!-- Arrow -->
-              <div class="transition duration-500 ease-linear group-focus:text-red-500 group-focus:-rotate-180">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="12"
-                >
-                  <path fill="none" stroke="currentColor" stroke-width="3" d="M1 1l8 8 8-8" />
+              <!-- Tab Arrow -->
+              <div class="transition duration-500 ease-out group-focus:-rotate-180 group-focus:text-red-500">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                 </svg>
+                
               </div>
             </div>
-            <!-- Tab Innr Content -->
-            <div class="overflow-hidden transition duration-500 group-focus:max-h-screen max-h-0 ease">
-              <p class="py-2 text-justify text-gray-400">
-                For individual items, we offer an overnight carrier service to ensure you receive your order as soon as possible.
+            <!-- End Tab Flex Container -->
+
+            <!-- Tab Inner Content -->
+            <div class="overflow-hidden transition duration-500 ease-out group-focus:max-h-screen max-h-0">
+              <p class="py-2 text-justify text-gray-500">
+                Many times perfect 3D model designed by an experienced designer is the difference between a perfect product (profit) or total disasters. We repair few jobs started by others every year. 
               </p>
             </div>
+
           </div>
+          <!-- END Tab 1 -->
 
           <!-- Tab 2 -->
           <div class="py-1 border-b outline-none group" tabindex="2">
+
             <!-- Tab Flex Container -->
             <div
-              class="flex items-center justify-between py-3 text-gray-500 transition duration-500 ease-in-out cursor-pointer group"
+              class="flex items-center justify-between py-3 text-gray-500 transition duration-500 ease-out cursor-pointer group"
             >
               <!-- Tab Title -->
-              <div class="transition duration-500 ease-in-out group-hover:text-red-500">
-                How can I request a new browser?          
+              <div class="font-semibold text-gray-800 transition duration-500 ease-out group-hover:text-red-500">
+                Metal or Concrete Stairs?
               </div>
-              <!-- Arrow -->
-              <div class="transition duration-500 ease-linear group-focus:text-red-500 group-focus:-rotate-180">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="12"
-                >
-                  <path fill="none" stroke="currentColor" stroke-width="3" d="M1 1l8 8 8-8" />
+              <!-- Tab Arrow -->
+              <div class="transition duration-500 ease-out group-focus:-rotate-180 group-focus:text-red-500">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                 </svg>
+                
               </div>
             </div>
-            <!-- Tab Innr Content -->
-            <div class="overflow-hidden transition duration-500 group-focus:max-h-screen max-h-0 ease">
-              <p class="py-2 text-justify text-gray-400">
-                For individual items, we offer an overnight carrier service to ensure you receive your order as soon as possible.
+            <!-- End Tab Flex Container -->
+
+            <!-- Tab Inner Content -->
+            <div class="overflow-hidden transition duration-500 ease-out group-focus:max-h-screen max-h-0">
+              <p class="py-2 text-justify text-gray-500">
+                We design perfect 3D model of metal stairs. The same time we think about balustrade. We cut parts by water-jet or lasser CNC. Everything is precise and easy to assembly. Metal stairs are much better choice thane concrete one.  
               </p>
             </div>
+
           </div>
+          <!-- END Tab 2 -->
 
           <!-- Tab 3 -->
           <div class="py-1 border-b outline-none group" tabindex="3">
-            <!-- Tab Flex Container -->
-            <div
-              class="flex items-center justify-between py-3 text-gray-500 transition duration-500 ease-in-out cursor-pointer group"
-            >
-              <!-- Tab Title -->
-              <div class="transition duration-500 ease-in-out group-hover:text-red-500">
-                Is there a mobile app?            
-              </div>
-              <!-- Arrow -->
-              <div class="transition duration-500 ease-linear group-focus:text-red-500 group-focus:-rotate-180">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="12"
-                >
-                  <path fill="none" stroke="currentColor" stroke-width="3" d="M1 1l8 8 8-8" />
-                </svg>
-              </div>
-            </div>
-            <!-- Tab Innr Content -->
-            <div class="overflow-hidden transition duration-500 group-focus:max-h-screen max-h-0 ease">
-              <p class="py-2 text-justify text-gray-400">
-                For individual items, we offer an overnight carrier service to ensure you receive your order as soon as possible.
-              </p>
-            </div>
-          </div>
 
-          <!-- Tab 4 -->
-          <div class="py-1 border-b outline-none group" tabindex="4">
             <!-- Tab Flex Container -->
             <div
-              class="flex items-center justify-between py-3 text-gray-500 transition duration-500 ease-in-out cursor-pointer group"
+              class="flex items-center justify-between py-3 text-gray-500 transition duration-500 ease-out cursor-pointer group"
             >
               <!-- Tab Title -->
-              <div class="transition duration-500 ease-in-out group-hover:text-red-500">
-                What about other Cromion Browsers?            
+              <div class="font-semibold text-gray-800 transition duration-500 ease-out group-hover:text-red-500">
+                Why we use computer calculations?
               </div>
-              <!-- Arrow -->
-              <div class="transition duration-500 ease-linear group-focus:text-red-500 group-focus:-rotate-180">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="12"
-                >
-                  <path fill="none" stroke="currentColor" stroke-width="3" d="M1 1l8 8 8-8" />
+              <!-- Tab Arrow -->
+              <div class="transition duration-500 ease-out group-focus:-rotate-180 group-focus:text-red-500">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                 </svg>
+                
               </div>
             </div>
-            <!-- Tab Innr Content -->
-            <div class="overflow-hidden transition duration-500 group-focus:max-h-screen max-h-0 ease">
-              <p class="py-2 text-justify text-gray-400">
-                For individual items, we offer an overnight carrier service to ensure you receive your order as soon as possible.
+            <!-- End Tab Flex Container -->
+
+            <!-- Tab Inner Content -->
+            <div class="overflow-hidden transition duration-500 ease-out group-focus:max-h-screen max-h-0">
+              <p class="py-2 text-justify text-gray-500">
+                Our business is 3D cad design. We built our web andandroid calculations to speed up design work. Time is money. Is possible to build simple balustrade just with calculations without any drawings.  
               </p>
             </div>
+
           </div>
+          <!-- END Tab 2 -->
 
         </div>
       </div>
     </section>
 
-    <section id="newsletter" class="bg-softBlue">
-      <!-- Main Container -->
-      <div class="max-w-lg py-24 mx-auto">
-        <p class="mb-6 text-lg tracking-widest text-center text-white uppercase">
-          35,000+ Already Joined
-        </p>
-        <h2 class="px-3 mb-6 text-3xl font-semibold text-center text-white md:text-4xl">
-          Stay up-to-date with what we're doing'
-        </h2>
-      
-
-        <!-- Form -->
-        <form
-          class="flex flex-col items-start justify-center max-w-2xl px-6 mx-auto space-y-6 text-base md:flex-row md:space-y-0 md:space-x-4"
-        >
-          <!-- Input and Button Container -->
-          <div class="flex flex-col items-center justify-between mx-auto md:flex-row">
-            <input 
-              type="email"
-              class="flex-1 px-6 pt-3 pb-2 mb-4 border-white rounded-lg border-1 focus:outline-none md:mr-3 md:mb-0"
-              placeholder="Enter your email address"
-            >
-            <input 
-              type="submit"
-              class="inline-flex px-6 py-3 font-semibold text-center text-white duration-200 transform rounded-lg cursor-pointer py- focus:outline-none bg-softRed hover:opacity-90"
-              value="Contact Us"
-            >
-          </div>
-
-        </form>
-      </div>
-    </section>
-
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer class="py-16 bg-veryDarkBlue">
-      <!-- Flex Container -->
-      <div class="container flex flex-col items-center justify-between px-6 mx-auto spac-y-16 md:flex-row md:space-y-0">
-        <!-- Logo/Menu Container -->
-        <div 
-          class="flex flex-col items-center justify-between space-y-8 text-lg font-light md:flex-row md:space-y-0 md:space-x-14 text-grayishBlue"
-        >
-          <img src="images/logo-bookmark-footer.svg" alt="logo" class="mb-1">
+      <!-- Footer Flex Container -->
+      <div class="flex flex-col items-center justify-between px-6 mx-auto space-y-4 continer md:flex-row md:space-y-0">
 
-          <a href="#features" class="uppercase hover:text-softRed">Features</a>
-          <a href="#download" class="uppercase hover:text-softRed">Download</a>
+        <!-- Logo/Menu Container -->
+        <div
+          class="flex flex-col items-center justify-between space-y-4 text-lg font-light md:flex-row md:space-y-0 md:space-x-4 text-grayishBlue xxl:ml-72"
+        >
+          <img src="images/logo.png" alt="14CAD.com" class="w-32 h-32 mb-1">
+
+          <a href="#etsy-advert" class="uppercase hover:text-softRed">Home</a>
+          <a href="#calculations" class="uppercase hover:text-softRed">Calculations</a>
+          <a href="#apps" class="uppercase hover:text-softRed">Apps</a>
           <a href="#faq" class="uppercase hover:text-softRed">FAQ</a>
         </div>
+
         <!-- Social Container -->
-        <div class="flex space-x-10">
-          <a href="#">
-            <img src="images/icon-facebook.svg" alt="facebook" class="h-6 ficon">
+        <div class="flex space-x-4">
+          <a href="https://www.facebook.com/itmagic.dev" rel="external">
+            <img src="images/facebook-icon.png" alt="facebook Stairs, Balustrades, Railings, Balconies & Gates" class="w-10 h-10 ficon">
           </a>
-          <a href="#">
-            <img src="images/icon-twitter.svg" alt="twitter" class="h-6 ficon">
+          <a href="https://www.facebook.com/itmagic.dev" rel="external">
+            <img src="images/instagram.png" alt="Instagram Stairs, Balustrades, Railings, Balconies & Gates" class="w-12 h-12 ficon">
           </a>
         </div>
-      </div>
-    </footer>
 
-  </body>
+      </div>
+    
+      <div class="hidden text-center text-orange-400 md:block">
+        &copy;<span id="copyright"><script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span> Eve Star | All Rights Reserved | <button id="btn-privacy-open" class="px-4 py-2 transition duration-500 border border-orange-500 rounded-md hover:scale-105">Privacy Policy</button> | Site by Peter Krizovnik
+      </div>
+
+      <div class="flex flex-col items-center justify-center mt-6 space-y-2 text-center text-orange-400 md:hidden">
+       <div>&copy;<span id="copyright_2"><script>document.getElementById('copyright_2').appendChild(document.createTextNode(new Date().getFullYear()))</script></span> Eve Star | All Rights Reserved</div>
+       <button id="btn-privacy-open-2" class="px-4 py-2 transition duration-500 border border-orange-500 rounded-md hover:scale-105">Privacy Policy</button>
+       <div>Site by Peter Krizovnik</div>
+      </div>
+ 
+
+    </footer>
+    <!-- END FOOTER -->
+
+    <!-- MODAL Start Points -->  
+    <div class="hidden" id="card-start-points" id="xxx">
+      <div class="fixed inset-0 z-50 flex flex-col items-center justify-center w-full h-full opacity-95 bg-slate-700">
+        <div class="flex flex-col items-center justify-center p-4 bg-gray-400 md:p-16 gap-y-4 rounded-xl">
+          <h2 class="text-2xl text-gray-700">Start Points</h2>
+          <div id="startsContainer">Bar number is 0. No start points!</div>
+          <button class="px-4 btn-one" id="btn-card-close">Close Window</button>
+        </div>
+      </div>
+    </div>
+    <!-- END MODAL Start Points -->
+
+    <!-- MODAL Delete/Clear parts or part -->
+    <div id="popup-modal-delete-parts" class="hidden">
+      <div class="fixed inset-0 z-50 flex flex-col items-center justify-center w-full h-full opacity-95 bg-slate-700">
+        <div class="relative w-full h-full max-w-md md:h-auto">
+          <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <button id="btn-close-modal-delete-parts" type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white">
+              <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+              <span class="sr-only">Close modal</span>
+            </button>
+            <div class="p-6 text-center">
+              <svg aria-hidden="true" class="mx-auto mb-4 text-gray-400 w-14 h-14 dark:text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400 delete-part-text">Are you sure you want to delete this Part?</h3>
+              
+              <!-- Single Part REMOVE -->
+              <div id="container-btn-single" class="hidden">
+                <button type="button" id="btn-remove-part" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm items-center px-5 py-2.5 text-center mr-2 w-48">
+                    Yes, I'm sure
+                </button>
+              </div>
+
+              <!-- ALL Parts REMOVE -->
+              <div id="container-btn-all" class="hidden">
+                <button type="button" id="btn-remove-parts-all" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm items-center px-5 py-2.5 text-center mr-2 w-48 mx-auto">
+                  Yes, I'm sure
+                </button>
+              </div>
+
+              <button type="button" id="btn-cancel-delete-parts" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600 mt-4 w-48">No, cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END MODAL Delete/Clear parts or part -->
+
+    <!-- MODAL Prvacy Policy -->
+    <div id="popup-modal-privacy" class="hidden">
+      <div class="fixed inset-0 z-50 flex flex-col items-center justify-center w-full h-full opacity-95 bg-slate-700">
+        <div class="relative w-full h-full max-w-md overflow-x-hidden overflow-y-auto md:h-auto">
+          <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <button id="btn-close-privacy-1" type="button" class="absolute top-3 right-2.5 text-gray-800 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white">
+              <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+              <span class="sr-only">Close modal</span>
+            </button>
+
+            <div class="p-2">
+
+              <h2 class="mb-2 text-lg font-bold text-orange-600 pt-7">Privacy Policy</h2>
+              <p>
+                At Eve Star, accessible from <a href="https://14cad.com" rel="external" class="text-blue-700">14cad.com</a>, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by 3D Design PRO and how we use it. If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us through email at info@itmagic.dev
+              </p>
+
+              <h2 class="mb-2 text-lg font-bold text-orange-600 pt-7">Log Files</h2>
+              <p>
+                Eve Star follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users movement on the website, and gathering demographic information.
+              </p>
+
+              <h2 class="mb-2 text-lg font-bold text-orange-600 pt-7">Cookies and Web Beacons</h2>
+              <p>
+                Like any other website, Eve Star uses cookies. These cookies are used to store information including visitors preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users experience by customizing our web page content based on visitors browser type and/or other information.
+              </p>
+
+              <h2 class="mb-2 text-lg font-bold text-orange-600 pt-7">Google DoubleClick DART Cookie</h2>
+              <p>
+                Google is one of a third-party vendor on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to www.website.com and other sites on the internet. However, visitors may choose to decline the use of DART cookies by visiting the Google ad and content network Privacy Policy at the following URL <a href="https://policies.google.com/technologies/ads" rel="external" class="text-blue-700">https://policies.google.com/technologies/ads</a>
+              </p>
+
+              <h2 class="mb-2 text-lg font-bold text-orange-600 pt-7">Our Advertising Partners</h2>
+              <p>
+                Some of advertisers on our site may use cookies and web beacons. Our advertising partners are listed below. Each of our advertising partners has their own Privacy Policy for their policies on user data. For easier access, we hyperlinked to their Privacy Policies below.
+
+                <p>Google: <a href="https://policies.google.com/technologies/ads" rel="external" class="text-blue-700">https://policies.google.com/technologies/ads</a></p>
+              </p>
+
+              <h2 class="mb-2 text-lg font-bold text-orange-600 pt-7">Privacy Policies</h2>
+              <p>
+                You may consult this list to find the Privacy Policy for each of the advertising partners of Eve Star. Our Privacy Policy was created with the help of the Privacy Policy Generator.
+              </p>
+
+              <p class="mt-2">
+                Third-party ad servers or ad networks uses technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on Eve Star, which are sent directly to users browser. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on websites that you visit.
+              </p>
+
+              <p class="mt-2">
+                Note that Eve Star has no access to or control over these cookies that are used by third-party advertisers.
+              </p>
+
+              <h2 class="mb-2 text-lg font-bold text-orange-600 pt-7">Third Party Privacy Policies</h2>
+              <p>
+                Eve Star Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options. You may find a complete list of these Privacy Policies and their links here: Privacy Policy Links.
+              </p>
+
+              <p class="mt-2">
+                You can choose to disable cookies through your individual browser options. To know more detailed information about cookie management with specific web browsers, it can be found at the browsers respective websites. What Are Cookies?
+              </p>
+
+              <h2 class="mb-2 text-lg font-bold text-orange-600 pt-7">Childrens Information</h2>
+              <p>
+                Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.
+              </p>
+
+              <p class="mt-2">
+                Eve Star does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.
+              </p>
+
+              <h2 class="mb-2 text-lg font-bold text-orange-600 pt-7">Online Privacy Policy Only</h2>
+              <p>
+                This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in Eve Star. This policy is not applicable to any information collected offline or via channels other than this website.
+              </p>
+
+              <h2 class="mb-2 text-lg font-bold text-orange-600 pt-7">Consent</h2>
+              <p>
+                By using our website, you hereby consent to our Privacy Policy and agree to its Terms and Conditions.
+              </p> 
+
+            </div>
+
+            <div class="p-6 text-center">
+    
+              <button type="button" id="btn-close-privacy" class="text-gray-800 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600 mt-4 w-48">Close Privacy Policy</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END MODAL Delete/Clear parts or part -->
+
+
+    <!-- ADVERT 1 -->
+    <div class="fixed hidden w-64 p-1 border-2 border-orange-800 rounded-md top-4 left-5 xxl:block">
+      <div class="relatve">
+        <img src="images/14cad-advert-1.png" alt="bottle holder">
+        <a 
+          href="https://www.etsy.com/uk/listing/1115195231/bottles-rack-digital-product-file-dxf?click_key=1f1510438610488326a3028b4271d51a136b83cf%3A1115195231&click_sum=220a9061&ref=shop_home_recs_2&pro=1" 
+          rel="external" 
+          class="absolute w-2/3 p-2 m-2 text-center text-white transition duration-300 rounded left-8 bg-softRed bottom-1 hover:scale-105">Go to Etsy</a>
+      </div>
+    </div>
+
+    <!-- ADVERT 2 -->
+    <div class="fixed hidden w-64 p-1 border-2 border-orange-800 rounded-md bottom-4 left-5 xxl:block">
+      <div class="relatve">
+        <img src="images/14cad-advert-2.png" alt="rectangular firepit">
+        <a 
+          href="https://www.etsy.com/uk/listing/1050587982/rectangle-fire-pit-digital-product-file?click_key=5decb993bb0044485d2b87c1fb6b33f5effedae9%3A1050587982&click_sum=81505a83&ref=shop_home_recs_10&pro=1" 
+          rel="external" 
+          class="absolute w-2/3 p-2 m-2 text-center text-white transition duration-300 rounded left-8 bg-softRed bottom-1 hover:scale-105">Go to Etsy</a>
+      </div>
+    </div>
+
+    <!-- Messenger Chat plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "108660137620792");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v15.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_GB/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+  </body>  
 </html>

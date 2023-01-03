@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600&family=Rokkitt:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/traversy-list.js" defer></script>
+    <title>Task List</title>     
+  </head>
+  <body>
+    
+   
+    <nav class="relative p-5 bg-slate-600">
+      <h1 class="text-2xl text-center text-white">Tailwind Short Projects</h1>
+    </nav>
+
+    <!-- LOGIN MODAL -->
+    <!-- Global Container -->
+    <div class="flex items-center justify-center h-auto py-10 bg-rose-400">
+      
+      <!-- Card Container -->
+      <div class="relative flex flex-col items-center justify-center m-6 space-y-10 bg-white shadow-2xl rounded-2xl md:flex-row md:space-y-0 md:m-0">
+        
+        <!-- Left Side - Content -->
+        <div class="p-6 md:p-20">
+
+          <!-- Top Content -->
+          <h2 class="mb-5 font-mono text-4xl font-bold">
+            Log In
+          </h2>
+          <p class="max-w-sm mb-12 font-light text-gray-600 font-sans2">
+            Log in to your account to upload or download pictures, videos or music.
+          </p>
+          <input 
+            class="w-full p-6 border border-gray-600 rounded-md placeholder:font-sans2 placeholder:font-light"
+            placeholder="Enter your email address"
+            type="text"     
+          >
+
+          <!-- Middle Content -->
+          <div class="flex flex-col items-center justify-between mt-6 space-y-6 md:flex-row md:space-y-0">
+            <div class="font-thin text-cyan-500">
+              Forgot Password
+            </div>
+            <button class="flex items-center justify-center w-full p-6 space-x-4 font-bold text-white rounded-md md:w-auto font-sans2 px-9 bg-cyan-800 shadow-cyan-100 hover:bg-opacity-90 shadow-sm hover:shadow-lg border transition hover:-translate-y-0.5 duration-150">
+              <span>Next</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+              
+            </button>
+          </div>
+
+          <!-- Border -->
+          <div class="mt-12 border-b border-gray-400"></div>
+
+          <!-- Bottom Content -->
+          <p class="py-6 text-sm font-thin text-center text-gray-400">
+            Or log in width
+          </p>
+
+          <!-- Bottom Buttons Container -->      
+          <div class="flex flex-col space-x-0 space-y-6 md:flex-row md:space-y-0 md:space-x-4">
+
+            <button class="flex items-center justify-center py-2 space-x-3 border border-gray-300 rounded shadow-sm hover:bg-opacity-30 hover:shadow-lg hover:-translate-y-0.5 transition duration-150 md:w-1/2">
+              <img src="images/facebook.png" alt="facebook" class="w-9">
+              <span class="font-thin">Facebook</span>
+            </button>
+
+            <button class="flex items-center justify-center py-2 space-x-3 border border-gray-300 rounded shadow-sm hover:bg-opacity-30 hover:shadow-lg hover:-translate-y-0.5 transition duration-150 md:w-1/2">
+              <img src="images/google.png" alt="google" class="w-9">
+              <span class="font-thin">Google</span>
+            </button>
+
+          </div>
+
+        </div>
+
+        <!-- Right Side - Image only from medium screens -->
+        <img src="images/M7.jpg" alt="michelle" class="w-[430px] rounded-r-2xl hidden lg:block">
+
+        <!-- Close Button -->
+        <div class="absolute p-2 text-gray-600 transition duration-150 bg-white border-2 border-gray-500 rounded-full cursor-pointer right-5 top-5 hover:scale-105 group">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 group-hover:text-gray-800">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+          
+        </div>
+
+      </div>
+
+    </div>
+    <!-- END LOGIN MODAL -->
+
+    <!-- IMAGE GALLERY -->
+    <!-- Global Container -->
+    <div class="flex items-center justify-center h-auto bg-cyan-50">
+      <!-- Card Container -->
+      <div class="p-6 space-y-10 bg-white shadow-2xl rounded-3xl md:p-40">
+        
+        <!-- Menu Container -->
+        <div
+          class="flex flex-col items-center justify-center space-y-3 md:flex-row md:space-y-0 md:space-x-8 md:mb-24 md:justify-end"
+        >
+
+          <!-- Menu Items -->
+          <div class="group">
+            <a href="#">Vector</a>
+            <div class="mx-2 duration-500 border-b-2 border-black opacity-0 group-hover:opacity-100"></div>
+          </div>
+
+          <div class="group">
+            <a href="#">Ilustrations</a>
+            <div class="mx-2 duration-500 border-b-2 border-black opacity-0 group-hover:opacity-100"></div>
+          </div>
+
+          <div class="group">
+            <a href="#">Images</a>
+            <div class="mx-2 duration-500 border-b-2 border-black opacity-0 group-hover:opacity-100"></div>
+          </div>
+
+          <div class="group">
+            <a href="#">Icons</a>
+            <div class="mx-2 duration-500 border-b-2 border-black opacity-0 group-hover:opacity-100"></div>
+          </div>
+
+        </div>
+
+        <!-- Search Container -->
+        <div class="flex flex-col items-center justify-center space-y-5 md:justify-between md:flex-row md:space-y-0">
+
+          <!-- Input and SVG Container -->
+          <div class="flex justify-between border-b">
+            <input 
+              class="ml-6 border-none md:w-80 placeholder:font-thin focus:outline-none"
+              placeholder="Search"
+              type="text"
+            >
+            <button>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" class="stroke-green-500" />
+              </svg>
+              
+            </button>
+          </div>
+
+          <!-- Upload Button -->
+          <button 
+            class="py-3 text-lg font-normal text-white duration-200 bg-green-700 border border-green-700 rounded-md shadow-2xl px-14 hover:bg-white hover:text-green-700"
+          >
+            Upload
+          </button>
+
+        </div>
+
+        <!-- Gallery Container -->
+        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+
+          <!-- Image 1 -->
+          <div class="relative group">
+            <img src="images/M1.jpg" alt="misa 1" class="w-72">
+            <div class="absolute bottom-0 left-0 right-0 p-2 px-4 text-white duration-500 bg-black opacity-0 group-hover:opacity-100 bg-opacity-40">
+
+              <div class="flex justify-between w-full">
+
+                <div class="font-normal">
+                  <p class="text-sm">Michelle playing in the sand</p>
+                  <p class="text-xs">245 likes - 35 shares</p>
+                </div>
+
+                <div class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                  </svg>
+                  
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+          <!-- END of Image -->
+
+          <!-- Image 2 -->
+          <div class="relative group">
+            <img src="images/M2.jpg" alt="misa 1" class="w-72">
+            <div class="absolute bottom-0 left-0 right-0 p-2 px-4 text-white duration-500 bg-black opacity-0 group-hover:opacity-100 bg-opacity-40">
+
+              <div class="flex justify-between w-full">
+
+                <div class="font-normal">
+                  <p class="text-sm">Michelle playing in the sand</p>
+                  <p class="text-xs">245 likes - 35 shares</p>
+                </div>
+
+                <div class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                  </svg>
+                  
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+          <!-- END of Image -->
+
+          <!-- Image 3 -->
+          <div class="relative group">
+            <img src="images/M3.jpg" alt="misa 1" class="w-72">
+            <div class="absolute bottom-0 left-0 right-0 p-2 px-4 text-white duration-500 bg-black opacity-0 group-hover:opacity-100 bg-opacity-40">
+
+              <div class="flex justify-between w-full">
+
+                <div class="font-normal">
+                  <p class="text-sm">Michelle playing in the sand</p>
+                  <p class="text-xs">245 likes - 35 shares</p>
+                </div>
+
+                <div class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                  </svg>
+                  
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+          <!-- END of Image -->
+
+
+          <!-- Image 4 -->
+          <div class="relative group">
+            <img src="images/M4.jpg" alt="misa 1" class="w-72">
+            <div class="absolute bottom-0 left-0 right-0 p-2 px-4 text-white duration-500 bg-black opacity-0 group-hover:opacity-100 bg-opacity-40">
+
+              <div class="flex justify-between w-full">
+
+                <div class="font-normal">
+                  <p class="text-sm">Michelle playing in the sand</p>
+                  <p class="text-xs">245 likes - 35 shares</p>
+                </div>
+
+                <div class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                  </svg>
+                  
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+          <!-- END of Image -->
+
+          <!-- Image 5 -->
+          <div class="relative group">
+            <img src="images/M5.jpg" alt="misa 1" class="w-72">
+            <div class="absolute bottom-0 left-0 right-0 p-2 px-4 text-white duration-500 bg-black opacity-0 group-hover:opacity-100 bg-opacity-40">
+
+              <div class="flex justify-between w-full">
+
+                <div class="font-normal">
+                  <p class="text-sm">Michelle playing in the sand</p>
+                  <p class="text-xs">245 likes - 35 shares</p>
+                </div>
+
+                <div class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                  </svg>
+                  
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+          <!-- END of Image -->
+
+          <!-- Image 6 -->
+          <div class="relative group">
+            <img src="images/M6.jpg" alt="misa 1" class="w-72">
+            <div class="absolute bottom-0 left-0 right-0 p-2 px-4 text-white duration-500 bg-black opacity-0 group-hover:opacity-100 bg-opacity-40">
+
+              <div class="flex justify-between w-full">
+
+                <div class="font-normal">
+                  <p class="text-sm">Michelle playing in the sand</p>
+                  <p class="text-xs">245 likes - 35 shares</p>
+                </div>
+
+                <div class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                  </svg>
+                  
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+          <!-- END of Image -->
+
+        </div>
+
+
+      </div>
+    </div>
+
+    <!-- END IMAGE GALLERY -->
+
+
+    <!-- CARD, INPUT, BUTTON -->
+    <!-- Background Container -->
+    <div class="flex items-center justify-center h-auto p-4 bg-zinc-700">
+      
+      <!-- CARD -->
+      <div class="p-2 mx-6 bg-zinc-800 rounded-2xl">
+        <!-- Flex Container -->
+        <div class="flex flex-col md:flex-row rounded-l-xl">
+          <!-- Image -->
+          <img 
+            class="object-contain mx-auto animate-spin-slow h-80 w-80 md:h-64 md:w-64"
+            src="images/it-magic.png" 
+            alt="it-magic">
+          <!-- Content -->
+          <div class="p-6 md:p-12">
+            <h2 class="text-xl font-medium text-center text-white md:text-left">
+              Get diet and fitness tips in your inbox
+            </h2>
+            <p class="max-w-xs my-4 text-xs leading-5 tracking-wide text-center text-white md:text-left">
+              Eat better and exercise better. Sign up for the Diet & Fitness newsletter.
+            </p>
+            <div class="flex flex-col mt-5 space-y-4 md:space-x-3 md:flex-row md:space-y-0">
+              <input 
+                class="w-full p-2 px-4 text-center text-white border-2 bg-zinc-800 border-zinc-600 placeholder:text-xs placeholder:text-center placeholder:md:text-left md:text-left focus:outline-none"
+                type="text" 
+                placeholder="Enter your email address"
+              >
+              <button
+                class="px-5 py-3 text-xs duration-500 rounded-sm text-zinc-800 bg-lime-500 hover:bg-lime-700 hover:text-white"
+              >
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- END CARD, INPUT, BUTTON -->
+
+    
+    <!-- PRICING CARDS - GRID -->
+    <!-- Container -->
+    <div class="flex items-center justify-center h-auto pt-5 pb-5 bg-slate-800">
+      <div class="flex flex-col my-6 space-y-6 md:space-y-0 md:space-x-6 md:flex-row md:my-0">
+        
+        <!-- COL 1 -->
+        <div class="text-white bg-slate-700 rounded-xl">
+
+          <!-- Upper Container -->
+          <div class="p-8 mx-3 mt-3 rounded-t-xl bg-slate-800">
+            <div class="text-center uppercase">Basic</div>
+            <div class="mt-10 font-serif text-5xl text-center">100GB</div>
+            <div class="mt-2 text-center">$1.99/Month</div>
+            <div class="flex justify-center">
+              <a 
+                class="inline-block px-10 py-3 my-6 text-center duration-200 border rounded-lg border-violet-600 hover:bg-violet-800 hover:border-violet-800"
+                href="#">
+              Purchase</a>
+            </div>
+          </div>
+
+          <!-- Border -->
+          <div class="border-t border-slate-700"></div>
+
+          <!-- Lower Container -->
+          <div class="p-8 mx-3 mb-3 rounded-b-xl bg-slate-800">
+            <!-- LIST Container -->
+            <div class="flex flex-col space-y-2">
+
+              <!-- List ITEM 1 -->
+              <div class="flex items-center justify-center text-yellow-200">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+                <span class="ml-1 text-sm">100 GB of storage</span>
+              </div>
+
+              <!-- List ITEM 2 -->
+              <div class="flex items-center justify-center text-yellow-200">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+                <span class="ml-1 text-sm">Option to add members</span>
+              </div>
+
+              <!-- List ITEM 3 -->
+              <div class="flex items-center justify-center text-yellow-200">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+                <span class="ml-1 text-sm">Extra member benefits</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+        <!-- END COL 1 -->
+
+        <!-- COL 2 -->
+        <div class="text-white scale-105 bg-violet-500 rounded-xl">
+
+          <!-- Upper Container -->
+          <div class="p-8 mx-3 mt-3 rounded-t-xl bg-slate-800">
+            <div class="text-center uppercase">Standard</div>
+            <div class="mt-10 font-serif text-5xl text-center">200GB</div>
+            <div class="mt-2 text-center">$3.99/Month</div>
+            <div class="flex justify-center">
+              <a 
+                class="inline-block px-10 py-3 my-6 text-center duration-200 border rounded-lg bg-violet-600 border-violet-600 hover:bg-violet-800 hover:border-violet-800"
+                href="#">
+              Purchase</a>
+            </div>
+          </div>
+
+          <!-- Border -->
+          <div class="border-t border-slate-700"></div>
+
+          <!-- Lower Container -->
+          <div class="p-8 mx-3 mb-3 rounded-b-xl bg-slate-800">
+            <!-- LIST Container -->
+            <div class="flex flex-col space-y-2">
+
+              <!-- List ITEM 1 -->
+              <div class="flex items-center justify-center text-yellow-200">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+                <span class="ml-1 text-sm">200 GB of storage</span>
+              </div>
+
+              <!-- List ITEM 2 -->
+              <div class="flex items-center justify-center text-yellow-200">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+                <span class="ml-1 text-sm">Option to add members</span>
+              </div>
+
+              <!-- List ITEM 3 -->
+              <div class="flex items-center justify-center text-yellow-200">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+                <span class="ml-1 text-sm">Extra member benefits</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+        <!-- END COL 2 -->
+
+        <!-- COL 3 -->
+        <div class="text-white bg-slate-700 rounded-xl">
+
+          <!-- Upper Container -->
+          <div class="p-8 mx-3 mt-3 rounded-t-xl bg-slate-800">
+            <div class="text-center uppercase">Premium</div>
+            <div class="mt-10 font-serif text-5xl text-center">500GB</div>
+            <div class="mt-2 text-center">$7.99/Month</div>
+            <div class="flex justify-center">
+              <a 
+                class="inline-block px-10 py-3 my-6 text-center duration-200 border rounded-lg border-violet-600 hover:bg-violet-800 hover:border-violet-800"
+                href="#">
+              Purchase</a>
+            </div>
+          </div>
+
+          <!-- Border -->
+          <div class="border-t border-slate-700"></div>
+
+          <!-- Lower Container -->
+          <div class="p-8 mx-3 mb-3 rounded-b-xl bg-slate-800">
+            <!-- LIST Container -->
+            <div class="flex flex-col space-y-2">
+
+              <!-- List ITEM 1 -->
+              <div class="flex items-center justify-center text-yellow-200">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+                <span class="ml-1 text-sm">500 GB of storage</span>
+              </div>
+
+              <!-- List ITEM 2 -->
+              <div class="flex items-center justify-center text-yellow-200">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+                <span class="ml-1 text-sm">Option to add members</span>
+              </div>
+
+              <!-- List ITEM 3 -->
+              <div class="flex items-center justify-center text-yellow-200">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+                <span class="ml-1 text-sm">Extra member benefits</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+        <!-- END COL 3 -->
+
+      </div>
+    </div>
+    <!-- END PRICING CARDS - GRID -->
+
+    <!-- PRODUCT MODAL -->
+    <!-- Global Container -->
+    <div class="flex items-center justify-center h-auto p-5">
+
+      <!-- Card Container -->
+      <div class="flex flex-col p-6 m-3 space-y-10 bg-white shadow-2xl rounded-2xl md:flex-row md:space-y-0 md:space-x-10 md:m-0 md:p-16">
+        
+        <!-- IMG DIV -->
+        <div>
+          <img src="images/oval-stair.png" alt="etsy" class="mx-auto duration-200 w-60 hover:scale-105">
+        </div>
+
+        <!-- Content -->
+        <div class="flex flex-col space-y-6">
+          <!-- Label & Description Container -->
+          <div class="flex flex-col mb-4 space-y-3 text-center md:text-left">
+
+            <!-- div t sty smaller width -->
+            <div>
+              <div class="inline-block px-3 py-1 text-sm text-white bg-black rounded-full">
+                Free Shipping
+              </div>
+            </div>
+
+            <!-- Title -->
+            <div class="max-w-xs mx-auto text-xl font-medium md:mx-0">
+              Razer Kraken Kitty Edt Gaming Headset Quartz
+            </div>
+
+            <!-- Price Container -->
+            <div class="flex flex-col mb-4 space-y-3 text-center md:text-left">
+              <p class="line-through">$799</p>
+              <p class="text-5xl font-bold">$599</p>
+              <p class="text-sm font-light text-gray-400">
+                This offer is valid until December 31rd or as long as stock lasts!
+              </p>
+            </div>
+
+            <!-- Button Group -->
+            <div class="group">
+              <button
+                class="w-full text-white transition-all duration-150 bg-blue-700 border-b-8 rounded-lg border-b-blue-700 group-hover:border-t-8 group-hover:border-b-0 group-hover:bg-blue-700 group-hover:border-t-blue-700 group-hover:shadow-lg"
+              >
+                <div class="px-8 py-4 duration-150 bg-blue-500 rounded-lg group-hover:bg-blue-700">
+                  Add to Cart
+                </div>
+              </button>
+            </div>
+
+            <!-- Stock -->
+            <div class="flex items-center space-x-3 group">
+              <div class="w-3 h-3 bg-green-400 rounded-full group-hover:animate-ping"></div>
+              <div class="text-sm">50+ pcs. in stock</div>
+            </div>
+
+            <!-- Bottom Buttons Container -->
+            <div class="flex flex-col space-y-4 md:space-y-0 md:space-x-4 md:flex-row">
+
+              <button class="flex items-center justify-center px-5 py-3 space-x-3 border-2 border-gray-400 rounded-lg shadow-md hover:bg-opacity-30 hover:shadow-lg hover:translate-y-0.5 transition-all duration-150">
+                <img src="images/icon-scale.svg" alt="scale" class="w-8 h-8">
+                <span>Add to Cart</span>
+              </button>
+
+              <button class="flex items-center justify-center px-5 py-3 space-x-3 border-2 border-gray-400 rounded-lg shadow-md hover:bg-opacity-30 hover:shadow-lg hover:translate-y-0.5 transition-all duration-150">
+                <img src="images/icon-heart.svg" alt="heart" class="w-8 h-8">
+                <span>Add to Wishlist</span>
+              </button>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- END PRODUCT MODAL -->
+
+  </body>
+</html>
