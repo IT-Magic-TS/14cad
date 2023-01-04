@@ -3025,6 +3025,11 @@ video {
   background-color: hsl(216 53% 9% / var(--tw-bg-opacity));
 }
 
+.dark .dark\:bg-gray-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
+}
+
 .dark .dark\:bg-logo-dark-mode {
   background-image: url('../images/fylo/logo-dark-mode.svg');
 }
