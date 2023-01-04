@@ -49,14 +49,14 @@
           <!-- <img src="images/it-magic.png" alt="logo" class="object-cover w-20 h-20 md:h-14 md:w-14 animate-spin-slow"> -->
           <picture>
             <source type="image/webp" srcset="images/it-magic.webp">
-            <source type="image/jpeg" srcset="images/it-magic.png">
+            <source type="image/png" srcset="images/it-magic.png">
             <img src="images/it-magic.png" alt="logo" class="object-cover w-20 h-20 md:h-14 md:w-14 animate-spin-slow">
           </picture>
           <!-- <h1 id="logo-text" class="text-3xl font-bold text-gray-600">14 CAD</h1> -->
           <!-- <img src="images/logo-14.png" alt="14 CAD" class="w-auto h-24"> -->
           <picture>
             <source type="image/webp" srcset="images/logo-14.webp">
-            <source type="image/jpeg" srcset="images/logo-14.png">
+            <source type="image/png" srcset="images/logo-14.png">
             <img src="images/logo-14.png" alt="14 CAD" class="w-auto h-24">
           </picture>
         </div>
@@ -237,7 +237,14 @@
 
               <!-- Panel Image -->
               <div class="flex justify-center lg:w-2/3">
-                <img src="images/panel-simple.png" alt="panel simple" class="relative z-10 h-auto max-w-full border-8 border-gray-600 rounded-lg">
+                <!-- <img src="images/panel-simple.png" alt="panel simple" class="relative z-10 h-auto max-w-full border-8 border-gray-600 rounded-lg"> -->
+                <picture>
+                  <source media="(min-width:1019px)" type="image/webp" srcset="images/panel-simple.webp">
+                  <source media="(min-width:1019px)" type="image/png" srcset="images/panel-simple.png">
+                  <source media="(min-width:768px)" type="image/webp" srcset="images/panel-simple-sm.webp">
+                  <source media="(min-width:768px)" type="image/png" srcset="images/panel-simple-sm.png">
+                  <img src="images/panel-simple.png" alt="panel simple" class="relative z-10 h-auto max-w-full border-8 border-gray-600 rounded-lg">
+                </picture>
               </div>
 
               <!-- Panel Content -->
@@ -246,40 +253,40 @@
                 <!-- Calculate Gap -->
                 <div class="flex flex-col p-2 rounded-lg shadow-lg gap-y-2" id="simple-panel-container-A">
                   <div class="flex items-center">   
-                    <div class="calculation-label">Panel Length:</div>
+                    <label for="length" class="calculation-label">Panel Length:</label>
                     <input type="number" name="length" id="length" class="calculation-input panel-calc">
                   </div>
                   <div class="flex items-center">
-                    <div class="calculation-label">Bd (Bar Diameter):</div>
+                    <label for="barDiameter" class="calculation-label">Bd (Bar Diameter):</label>
                     <input type="number" name="barDiameter" id="barDiameter" class="calculation-input">
                   </div>
                   <div class="flex items-center">
-                    <div class="calculation-label">Bar Number:</div>
+                    <label for="barNumber" class="calculation-label">Bar Number:</label>
                     <input type="number" name="barNumber" id="barNumber" class="calculation-input">
                   </div>
                   <div class="flex items-center">
-                    <div class="calculation-label">Gap:</div>
-                    <input type="text" class="calculation-result" value="0" disabled id="panel-gap">
+                    <label for="gap" class="calculation-label">Gap:</label>
+                    <input name="gap" type="text" class="calculation-result" value="0" disabled id="panel-gap">
                   </div>
                 </div>
 
                 <!-- Calculate Bar Length -->
                 <div class="flex flex-col p-2 rounded-lg shadow-lg gap-y-2" id="simple-panel-container-B">
                   <div class="flex items-center">
-                    <div class="calculation-label">Panel Height:</div>
+                    <label for="height" class="calculation-label">Panel Height:</label>
                     <input type="number" name="height" id="panelHeight" class="calculation-input">
                   </div>
                   <div class="flex items-center">
-                    <div class="calculation-label">X:</div>
+                    <label for="X" class="calculation-label">X:</label>
                     <input type="number" name="X" id="panelX" class="calculation-input">
                   </div>
                   <div class="flex items-center">
-                    <div class="calculation-label">Y:</div>
+                    <label for="Y" class="calculation-label">Y:</label>
                     <input type="number" name="Y" id="panelY" class="calculation-input">
                   </div>
                   <div class="flex items-center">
-                    <div class="calculation-label">Bar Length:</div>
-                    <input type="text" class="calculation-result" value="0" disabled id="panel-bar-length">
+                    <label for="barLength" class="calculation-label">Bar Length:</label>
+                    <input name="barLength" type="text" class="calculation-result" value="0" disabled id="panel-bar-length">
                   </div>
                 </div>
 
