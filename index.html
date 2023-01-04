@@ -46,9 +46,19 @@
 
         <!-- LOGO and TEXT -->
         <div id="logo" class="z-50 flex items-center space-x-3">
-          <img src="images/it-magic.png" alt="logo" class="object-cover w-20 h-20 md:h-14 md:w-14 animate-spin-slow">
+          <!-- <img src="images/it-magic.png" alt="logo" class="object-cover w-20 h-20 md:h-14 md:w-14 animate-spin-slow"> -->
+          <picture>
+            <source type="image/webp" srcset="images/it-magic.webp">
+            <source type="image/jpeg" srcset="images/it-magic.png">
+            <img src="images/it-magic.png" alt="logo" class="object-cover w-20 h-20 md:h-14 md:w-14 animate-spin-slow">
+          </picture>
           <!-- <h1 id="logo-text" class="text-3xl font-bold text-gray-600">14 CAD</h1> -->
-          <img src="images/logo-14.png" alt="14 CAD" class="w-auto h-24">
+          <!-- <img src="images/logo-14.png" alt="14 CAD" class="w-auto h-24"> -->
+          <picture>
+            <source type="image/webp" srcset="images/logo-14.webp">
+            <source type="image/jpeg" srcset="images/logo-14.png">
+            <img src="images/logo-14.png" alt="14 CAD" class="w-auto h-24">
+          </picture>
         </div>
 
         <!-- Menu ITEMS -->
@@ -144,13 +154,22 @@
         <!-- Image -->
         <div class="relative mx-auto lg:mx-0 lg:mb-0 lg:w-2/3">
           <div class="bg-etsy z-2"></div>
-          <img 
+          <!-- <img 
             src="images/14cad-main.png" 
             alt="IT Magic Etsy Store" 
-            class="relative overflow-visible border-8 border-gray-600 rounded-lg z-2 lg:top-2 xl:top-2">
-          <!-- <div class="border-8 border-gray-600 rounded-lg z-5">
-            <img src="images/etsy.png" alt="IT Magic Etsy Store" class="object-cover">
-          </div> -->
+            class="relative overflow-visible border-8 border-gray-600 rounded-lg z-2 lg:top-2 xl:top-2"
+          > -->
+          <picture>
+            <source media="(min-width:1019px)" type="image/webp" srcset="images/A-xl.webp">
+            <source media="(min-width:1019px)" type="image/jpeg" srcset="images/A-xl.jpg">
+            <source media="(min-width:768px)" type="image/webp" srcset="images/A-main-sm.webp">
+            <source media="(min-width:768px)" type="image/jpeg" srcset="images/A-main-sm.jpg">
+            <img 
+              src="images/A-xl.jpg" 
+              alt="IT Magic Etsy Store" 
+              class="relative overflow-visible border-8 border-gray-600 rounded-lg z-2 lg:top-2 xl:top-2"
+            >
+          </picture>
         </div>
 
       </div>
