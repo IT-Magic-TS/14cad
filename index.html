@@ -548,7 +548,12 @@
           >
             <!-- Image -->
             <div class="flex justify-center">
-              <img src="images/android-1.png" alt="stair and balustrade calculator">
+              <!-- <img src="images/android-1.png" alt="stair and balustrade calculator"> -->
+              <picture>
+                <source type="image/webp" srcset="images/android-1.webp">
+                <source type="image/png" srcset="images/android-1.png">
+                <img src="images/android-1.png" alt="stair and balustrade calculator">
+              </picture>
             </div>  
             <!-- Text -->
             <h2 class="pt-6 text-xl font-bold">Stair & Balustrade Calculator</h2>
@@ -577,7 +582,12 @@
           >
             <!-- Image -->
             <div class="flex justify-center">
-              <img src="images/android-2.png" alt="Gate Calculator">
+              <!-- <img src="images/android-2.png" alt="Gate Calculator"> -->
+              <picture>
+                <source type="image/webp" srcset="images/android-2.webp">
+                <source type="image/png" srcset="images/android-2.png">
+                <img src="images/android-2.png" alt="gate calculator">
+              </picture>
             </div>
             <!-- Text -->
             <h2 class="pt-6 text-xl font-bold">Gate Calculator</h2>
@@ -606,7 +616,12 @@
           >
             <!-- Image -->
             <div class="flex justify-center">
-              <img src="images/android-3.png" alt="Railing Calculator">
+              <!-- <img src="images/android-3.png" alt="Railing Calculator"> -->
+              <picture>
+                <source type="image/webp" srcset="images/android-3.webp">
+                <source type="image/png" srcset="images/android-3.png">
+                <img src="images/android-3.png" alt="railing calculator">
+              </picture>
             </div>
             <!-- Text -->
             <h2 class="pt-6 text-xl font-bold">Railing Calculator</h2>
@@ -755,7 +770,12 @@
         <div
           class="flex flex-col items-center justify-between space-y-4 text-lg font-light md:flex-row md:space-y-0 md:space-x-4 text-grayishBlue xxl:ml-72"
         >
-          <img src="images/logo.png" alt="14CAD.com" class="w-32 h-32 mb-1">
+          <!-- <img src="images/logo.png" alt="14CAD.com" class="w-32 h-32 mb-1"> -->
+          <picture>
+            <source type="image/webp" srcset="images/logo.webp">
+            <source type="image/png" srcset="images/logo.png">
+            <img src="images/logo.png" alt="14CAD.com" class="w-32 h-32 mb-1">
+          </picture>
 
           <a href="#etsy-advert" class="uppercase hover:text-softRed">Home</a>
           <a href="#calculations" class="uppercase hover:text-softRed">Calculations</a>
@@ -774,7 +794,12 @@
             </picture>
           </a>
           <a href="https://www.facebook.com/itmagic.dev" rel="external">
-            <img src="images/instagram.png" alt="Instagram Stairs, Balustrades, Railings, Balconies & Gates" class="w-12 h-12 ficon">
+            <!-- <img src="images/instagram.png" alt="Instagram Stairs, Balustrades, Railings, Balconies & Gates" class="w-12 h-12 ficon"> -->
+            <picture>
+              <source type="image/webp" srcset="images/instagram.webp">
+              <source type="image/png" srcset="images/instagram.png">
+              <img src="images/instagram.png" alt="Instagram Stairs, Balustrades, Railings, Balconies & Gates" class="w-12 h-12 ficon">
+            </picture>
           </a>
         </div>
 
@@ -967,14 +992,14 @@
     <div id="fb-customer-chat" class="fb-customerchat">
     </div>
 
-    <script type="text/javascript">
+    <script>
       var chatbox = document.getElementById('fb-customer-chat');
       chatbox.setAttribute("page_id", "108660137620792");
       chatbox.setAttribute("attribution", "biz_inbox");
     </script>
 
     <!-- Your SDK code -->
-    <script type="text/javascript">
+    <script>
       window.fbAsyncInit = function() {
         FB.init({
           xfbml            : true,
