@@ -296,11 +296,11 @@
             </div>
 
             <div class="relative z-50 flex justify-center mt-4 gap-x-4">
-              <button class="btn-one w-52" id="panel-btn-start-points">Start Points</button>
+              <button type="button" class="btn-one w-52" id="panel-btn-start-points">Start Points</button>
             </div>
 
           </div>
-          <!-- END Simple Panel -->
+          <!-- END Simple Panel -->   
 
 
           <!-- STAIR BALUSTRADE -->
@@ -310,16 +310,34 @@
               <!-- Panel Image -->
               <div class="flex flex-col justify-middle lg:w-2/3">
                 <div id="img-A-stair-balustrade">
-                  <img src="images/B1.PNG" 
+                  <!-- <img src="images/B1.PNG" 
                     alt="panel simple" 
                     class="relative z-10 block h-auto max-w-xs mx-auto border-8 border-gray-600 rounded-lg sm:max-w-md md:max-w-lg"
-                  >
+                  > -->
+                  <picture>
+                    <source type="image/webp" srcset="images/B1.webp">
+                    <source type="image/png" srcset="images/B1.png">
+                    <img src="images/B1.PNG" 
+                      alt="panel simple" 
+                      class="relative z-10 block h-auto max-w-xs mx-auto border-8 border-gray-600 rounded-lg sm:max-w-md md:max-w-lg"
+                    >
+                  </picture>
                 </div>
                 <div class="hidden" id="img-B-stair-balustrade">
-                  <img src="images/A5.PNG" 
+                  <!-- <img src="images/A5.PNG" 
                     alt="panel simple" 
                     class="relative z-10 block h-auto max-w-xs mx-auto border-8 border-gray-600 rounded-lg md:max-w-2xl sm:max-w-md"
-                  >
+                  > -->
+                  <picture>
+                    <source media="(min-width:1019px)" type="image/webp" srcset="images/A5.webp">
+                    <source media="(min-width:1019px)" type="image/png" srcset="images/A5.png">
+                    <source media="(min-width:768px)" type="image/webp" srcset="imagesA5-sm.webp">
+                    <source media="(min-width:768px)" type="image/png" srcset="images/A5-sm.png">
+                    <img src="images/A5.PNG" 
+                      alt="panel simple" 
+                      class="relative z-10 block h-auto max-w-xs mx-auto border-8 border-gray-600 rounded-lg md:max-w-2xl sm:max-w-md"
+                    >
+                  </picture>
                 </div>
                 <div class="z-50 flex justify-center pt-2 gap-x-2">
                   <button class="px-4 btn-two" id="btn-dwg-A-SB">Drawing 1</button>
@@ -334,32 +352,32 @@
                 <div class="flex flex-col p-2 rounded-lg shadow-lg gap-y-2" id="k-container-A">
                   <h2 class="p-2 text-lg font-semibold text-center text-gray-800">Calculate Gap and Start Points</h2>
                   <div class="flex items-center">   
-                    <div class="calculation-label">going:</div>
+                    <label for="kGoing" class="calculation-label">going:</label>
                     <input type="number" name="kGoing" class="calculation-input">
                   </div>
 
                   <div class="flex items-center">   
-                    <div class="calculation-label">Bd:</div>
+                    <label for="kBd" class="calculation-label">Bd:</label>
                     <input type="number" name="kBd" class="calculation-input">
                   </div>
 
                   <div class="flex items-center">   
-                    <div class="calculation-label">Bar Number:</div>
+                    <label for="kBn" class="calculation-label">Bar Number:</label>
                     <input type="number" name="kBn" class="calculation-input">
                   </div>
   
                   <div class="flex items-center">   
-                    <div class="calculation-label">d:</div>
+                    <label for="kd" class="calculation-label">d:</label>
                     <input type="number" name="kd" class="calculation-input">
                   </div>
 
                   <div class="flex items-center">
-                    <div class="calculation-label">Gap:</div>
-                    <input type="text" class="calculation-result" value="0" disabled id="kGap">
+                    <label for="kGap" class="calculation-label">Gap:</label>
+                    <input name="kGap" type="text" class="calculation-result" value="0" disabled id="kGap">
                   </div>
 
                   <div class="p-2">
-                    <button class="px-4 mx-auto btn-one" id="k-btn-start-points">Start Points</button>
+                    <button type="button" class="px-4 mx-auto btn-one" id="k-btn-start-points">Start Points</button>
                   </div>
                 </div>
                 <!-- END Container A -->
@@ -369,39 +387,39 @@
                   <h2 class="p-2 text-lg font-semibold text-center text-gray-800">Calculate Handrail and Angle</h2>
 
                   <div class="flex items-center">   
-                    <div class="calculation-label">rise:</div>
+                    <label for="kRise" class="calculation-label">rise:</label>
                     <input type="number" name="kRise" class="calculation-input">
                   </div>
 
                   <div class="flex items-center">   
-                    <div class="calculation-label">Step Number:</div>
+                    <label for="kStepN" class="calculation-label">Step Number:</label>
                     <input type="number" name="kStepN" class="calculation-input">
                   </div>
 
                   <div class="flex items-center">
-                    <div class="calculation-label">L:</div>
-                    <input type="text" class="calculation-result" value="0" disabled id="kL">
+                    <label for="kL" class="calculation-label">L:</label>
+                    <input name="kL" type="text" class="calculation-result" value="0" disabled id="kL">
                   </div>
 
                   <div class="flex items-center">
-                    <div class="calculation-label">Angle:</div>
+                    <label for="kAngle" class="calculation-label">Angle:</label>
                     <input type="text" class="calculation-result" value="0" disabled id="kAngle">
                   </div>
 
                   <h2 class="p-2 text-lg font-semibold text-center text-gray-800">Calculate Bars Length</h2>
 
                   <div class="flex items-center">   
-                    <div class="calculation-label">H:</div>
+                    <label for="kH" class="calculation-label">H:</label>
                     <input type="number" name="kH" class="calculation-input">
                   </div> 
 
                   <div class="flex items-center">   
-                    <div class="calculation-label">Hd:</div>
+                    <label for="kHd" class="calculation-label">Hd:</label>
                     <input type="number" name="kHd" class="calculation-input">
                   </div>
 
                   <div class="flex items-center">   
-                    <div class="calculation-label">X:</div>
+                    <label for="kX" class="calculation-label">X:</label>
                     <input type="number" name="kX" class="calculation-input">
                   </div>
 
@@ -433,15 +451,15 @@
                   <input type="text" name="partName" id="part-name" placeholder="Part Name" class="w-full calculation-input-2 placeholder:text-sm">
                 </div>
                 <div class="flex items-center">   
-                  <div class="calculation-label">Price:</div>
+                  <label for="partPrice" class="calculation-label">Price:</label>
                   <input type="number" name="partPrice" class="w-40 calculation-input-2" id="part-price">
                 </div>
                 <div class="flex items-center">   
-                  <div class="calculation-label">Quantity:</div>
+                  <label for="partQuantity" class="calculation-label">Quantity:</label>
                   <input type="number" name="partQuantity" class="w-40 calculation-input-2" id="part-quantity">
                 </div>
                 <div class="flex items-center">   
-                  <div class="calculation-label">Total:</div>
+                  <label for="partTotal" class="calculation-label">Total:</label>
                   <input type="number" name="partTotal" disabled class="w-40 calculation-result-2 partTotal">
                 </div>         
                 <button
@@ -455,8 +473,8 @@
                 <!-- Buttons UPDATE PART -->
                 <div id="container-btns-update" class="hidden">
                   <div class="z-50 flex justify-center pt-2 gap-x-2">
-                    <button class="px-4 btn-two" id="btn-part-update">Save</button>
-                    <button class="px-4 btn-three" id="btn-part-update-cancel">Cancel</button>
+                    <button type="button" class="px-4 btn-two" id="btn-part-update">Save</button>
+                    <button type="button" class="px-4 btn-three" id="btn-part-update-cancel">Cancel</button>
                   </div>
                 </div>
   
@@ -533,7 +551,7 @@
               <img src="images/android-1.png" alt="stair and balustrade calculator">
             </div>  
             <!-- Text -->
-            <h5 class="pt-6 text-xl font-bold">Stair & Balustrade Calculator</h5>
+            <h2 class="pt-6 text-xl font-bold">Stair & Balustrade Calculator</h2>
             <p class="text-gray-400">
               Some very importan information you need to know before building stairs.
             </p>
@@ -562,7 +580,7 @@
               <img src="images/android-2.png" alt="Gate Calculator">
             </div>
             <!-- Text -->
-            <h5 class="pt-6 text-xl font-bold">Gate Calculator</h5>
+            <h2 class="pt-6 text-xl font-bold">Gate Calculator</h2>
             <p class="text-gray-400">
               Speed up marking centers of vertical gate bars.
             </p>
@@ -591,7 +609,7 @@
               <img src="images/android-3.png" alt="Railing Calculator">
             </div>
             <!-- Text -->
-            <h5 class="pt-6 text-xl font-bold">Railing Calculator</h5>
+            <h2 class="pt-6 text-xl font-bold">Railing Calculator</h2>
             <p class="text-gray-400">
               Many calculations for railings. Calculate gaps, vertical balusters start points...
             </p>
