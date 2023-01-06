@@ -258,7 +258,7 @@ function calculateKData() {
 
   let gap = (going - Bd * Bn) / Bn
 
-  if (gap > 0 && gap < going) {
+  if (gap > 0 && gap < going && !Number.isNaN(gap)) {
     kData.kgap = gap
     kGap.value = gap.toFixed(1)
     if(d > 0) {
@@ -271,6 +271,9 @@ function calculateKData() {
       }
       kData.starts = starts
     }
+  } else {
+    kData.kgap = 0
+    kGap.value = 0.0
   }
 
   // Container B
@@ -281,7 +284,7 @@ function calculateKData() {
   const dStep = Math.sqrt(x)
   const L = dStep * stepNumber
   
-  if (rise > 0 && going > 0 && L > 0) {
+  if (rise > 0 && going > 0 && L > 0) {   
     kL.value = Math.round(L)
   } else {
     kL.value = 0
@@ -299,9 +302,13 @@ function calculateKData() {
   }
 
   // Container C BARS LENGTH
-  const H = parseFloat(kData.kH)
-  const Hd = parseFloat(kData.kHd)
-  const X = parseFloat(kData.kX)
+  let H = parseFloat(kData.kH)
+  let Hd = parseFloat(kData.kHd)
+  let X = parseFloat(kData.kX)
+
+  if (Number.isNaN(H)) H = 0
+  if (Number.isNaN(Hd)) Hd = 0
+  if (Number.isNaN(X)) X = 0
 
   const barCentre = gap + Bd
   const d1 = gap - d + Bd
@@ -335,8 +342,8 @@ function calculateKData() {
     `
     cHtml += el
   })
-  
-  if (barsLength.length > 0) {
+  const isNotNum = Number.isNaN(barsLength[0])
+  if (barsLength.length > 0 && !isNotNum) {
     barContainer.innerHTML = cHtml
   } else {
     barContainer.innerHTML = ''

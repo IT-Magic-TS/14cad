@@ -11,6 +11,24 @@ const modalPrivacy = document.getElementById('popup-modal-privacy')
 const btnOpenPrivacy = document.getElementById('btn-privacy-open')
 const btnOpenPrivacy2 = document.getElementById('btn-privacy-open-2')
 
+const cookieContainer = document.getElementById('cookie-container')
+const cookieBtn = document.getElementById('cookie-btn')
+
+// Cookie - load container or button
+document.addEventListener('DOMContentLoaded', function() {
+  const data = JSON.parse(localStorage.getItem('cookies-14cad'))
+  // console.log('DATA: ', data)
+  if (data) {
+    cookieContainer.classList.add('hidden')
+  }
+})
+
+cookieBtn.addEventListener('click', function() {
+  cookieContainer.classList.add('hidden')
+  localStorage.setItem('cookies-14cad', 'true')
+})
+
+
 btnClosePrivacy.addEventListener('click', function() {
   modalPrivacy.classList.add('hidden')
 })
@@ -77,3 +95,54 @@ function navToggle() {
     logoText.classList.remove('text-white')
   }
 }
+
+// Start Service Worker
+let deferredPrompt;
+
+if (!window.Promise) {
+  window.Promise = Promise
+}
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').then(function() {
+    console.log('Service worker registered!')
+  })
+}
+
+window.addEventListener('beforeinstallprompt', function(event) {
+  // console.log('beforeinstallprompt fired')
+  // event.preventDefault()
+  // deferredPrompt = event
+  // return false
+})
+
+// let promise = new Promise(function(resolve, reject) {
+//   setTimeout(() => {
+//     resolve('Afte 3 seconds')
+//   }, 3000);
+// })
+
+// promise.then(text => console.log(text)).catch(err => console.log(err))
+
+// fetch('https://httpbin.org/ip').then(res => {
+//   console.log(res)
+//   return res.json()
+// })
+//   .then(data => console.log(data))
+//   .catch(err => console.log(err))
+
+// fetch('https://httpbin.org/post', {
+//   method: 'POST',
+//   headers: {
+//     'Content-Type': 'application/json',
+//     'Accept': 'application/json'
+//   },
+//   body: JSON.stringify({message: 'Does this work?'})
+// })
+//   .then(res => {
+//   console.log(res)
+//   return res.json()
+// })
+//   .then(data => console.log(data))
+//   .catch(err => console.log(err))
+

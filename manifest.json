@@ -1,14 +1,21 @@
 {
-	"name": "IT Magic",
-	"short_name": "IT Magic",
-	"theme_color": "#3292a6",
+	"name": "14 CAD",
+	"short_name": "14 CAD",
+	"theme_color": "#424242",
 	"background_color": "#fff",
 	"display": "standalone",
 	"orientation": "portrait-primary",
 	"scope": ".",
 	"start_url": "/index.html",
-	"description": "Mobile web development with JavaScript, Angular 8+, Ionic 5+, Vue, Bootstrap, Firebase, HTML 5, CSS3, Capacitor, Cordova.js. 3D and 2D design for the most expensive house market. Perfect drawings for CNC water-jet, laser or plasma cutting.",
+	"description": "Cutting-edge custom 3D models with gorgeous design from scratch - let us optimize your business, solving problems instead of creating new ones.",
+	"dir": "ltr",
+	"lang": "en-GB",
 	"icons": [
+		{
+			"src": "/icons/icon-48x48.png",
+			"sizes": "48x48",
+			"type": "image/png"
+		},
 		{
 			"src": "/icons/icon-72x72.png",
 			"sizes": "72x72",
