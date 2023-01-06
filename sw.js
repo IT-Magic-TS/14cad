@@ -32,6 +32,16 @@ self.addEventListener('install', function(event) {
           '/images/android-2.webp',
           '/images/android-3.png',
           '/images/android-3.webp',
+          '/images/logo.webp',
+          '/images/logo.png',
+          '/images/facebook-icon.png',
+          '/images/facebook-icon.webp',
+          '/images/instagram.png',
+          '/images/instagram.webp',
+          '/images/14cad-advert-1.png',
+          '/images/14cad-advert-1.webp',
+          '/images/14cad-advert-2.png',
+          '/images/14cad-advert-2.webp'
         ])
         // cache.add('/')
         // cache.add('/index.html')
