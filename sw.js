@@ -25,7 +25,27 @@ self.addEventListener('install', function(event) {
           '/images/panel-simple-sm.png',
           '/images/panel-simple-sm.webp',
           '/images/panel-simple.png',
-          '/images/panel-simple.webp'
+          '/images/panel-simple.webp',
+          '/images/A5-sm.png',
+          '/images/A5-sm.webp',
+          '/images/A5.png',
+          '/images/A5.webp',
+          '/images/android-1.png',
+          '/images/android-1.webp',
+          '/images/android-2.png',
+          '/images/android-2.webp',
+          '/images/android-3.png',
+          '/images/android-3.webp',
+          '/images/logo.webp',
+          '/images/logo.png',
+          '/images/facebook-icon.png',
+          '/images/facebook-icon.webp',
+          '/images/instagram.png',
+          '/images/instagram.webp',
+          '/images/14cad-advert-1.png',
+          '/images/14cad-advert-1.webp',
+          '/images/14cad-advert-2.png',
+          '/images/14cad-advert-2.webp'
         ])
         // cache.add('/')
         // cache.add('/index.html')
