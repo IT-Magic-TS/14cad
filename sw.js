@@ -17,7 +17,15 @@ self.addEventListener('install', function(event) {
           '/images/it-magic.webp',
           '/images/it-magic.png',
           '/images/logo-14.webp',
-          '/images/logo-14.png'
+          '/images/logo-14.png',
+          '/images/A-xl.webp',
+          '/images/A-xl.jpg',
+          '/images/A-main-sm.webp',
+          '/images/A-main-sm.jpg',
+          '/images/panel-simple-sm.png',
+          '/images/panel-simple-sm.webp',
+          '/images/panel-simple.png',
+          '/images/panel-simple.webp'
         ])
         // cache.add('/')
         // cache.add('/index.html')
