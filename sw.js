@@ -41,7 +41,11 @@ self.addEventListener('install', function(event) {
           '/images/14cad-advert-1.png',
           '/images/14cad-advert-1.webp',
           '/images/14cad-advert-2.png',
-          '/images/14cad-advert-2.webp'
+          '/images/14cad-advert-2.webp',
+          '/images/abc-sm.png',
+          '/images/abc-sm.webp',
+          '/images/abc.webp',
+          '/images/abc.png'
         ])
         // cache.add('/')
         // cache.add('/index.html')
