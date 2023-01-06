@@ -13,7 +13,11 @@ self.addEventListener('install', function(event) {
           '/js/fetch.js',
           '/js/script.js',
           '/js/calculations.js',
-          '/js/project-cost.js'
+          '/js/project-cost.js',
+          '/images/it-magic.webp',
+          '/images/it-magic.png',
+          '/images/logo-14.webp',
+          '/images/logo-14.png'
         ])
         // cache.add('/')
         // cache.add('/index.html')
