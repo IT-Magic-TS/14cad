@@ -45,7 +45,9 @@ self.addEventListener('install', function(event) {
           '/images/abc-sm.png',
           '/images/abc-sm.webp',
           '/images/abc.webp',
-          '/images/abc.png'
+          '/images/abc.png',
+          '/images/bbb.webp',
+          '/images/bbb.png'
         ])
         // cache.add('/')
         // cache.add('/index.html')
