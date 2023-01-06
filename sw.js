@@ -25,9 +25,7 @@ self.addEventListener('install', function(event) {
           '/images/panel-simple-sm.png',
           '/images/panel-simple-sm.webp',
           '/images/panel-simple.png',
-          '/images/panel-simple.webp',
-          '/images/B1.webp',
-          '/images/B1.png'
+          '/images/panel-simple.webp'
         ])
         // cache.add('/')
         // cache.add('/index.html')
