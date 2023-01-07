@@ -66,10 +66,10 @@ self.addEventListener('fetch', function(event) {
     caches.match(event.request)
       .then(function(response) {
         if (response) {
-          console.log(response)
+          // console.log(response)
           return response
         } else {
-          console.log(event.request)
+          // console.log(event.request)
           return fetch(event.request)
         }
       })
